@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans-Regular.woff2') format('woff2'),
+    url('OpenSans-Regular.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-VariableFont_wdth,wght.woff2') format('woff2'),
+    url('Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Italic-VariableFont_wdth,wght.woff2') format('woff2'),
+    url('Roboto-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-VariableFont_opsz,wght.woff2') format('woff2'),
+    url('Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-Italic-VariableFont_opsz,wght.woff2') format('woff2'),
+    url('Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+    font-display: swap;
+    font-style: italic;
+}

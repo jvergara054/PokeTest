@@ -1,0 +1,50 @@
+
+/*
+
+RP Digital Type Foundry
+Subscription Service
+
+
+Font Project: gorving.ca
+
+Licensee:     Chris Mahony
+Styles:       Agipo Bold Condensed
+Domains:      gorving.ca
+              liberte-en-vr.ca
+              stg-gorvingcanadaarticle-staging.kinsta.cloud
+              gorvingcanadaarticle.kinsta.cloud
+
+
+Installation:
+https://new.radimpesko.com/RP-W-6c7480d4-e4bf-4d0d-b465-8f6c8d72ec39/instructions
+
+EULA:
+https://new.radimpesko.com/licensing/web-license-subscription
+
+
+The fonts and font delivery service used on this website are provided via
+RP Digital Type Foundry, and are subject to the End User License Agreement
+entered into by the website owner. All other parties are explicitly
+restricted from using, in any manner, the font delivery service or the
+licensed fonts.
+
+The RP Digital Type Foundry Font Software is protected under domestic and
+international copyright law. Modifying, decomposing, reverse engineering or
+otherwise copying of RP Digital Type Foundry Font Software is illegal.
+
+© 2016–2026 RP Digital Type Foundry
+
+mail@radimpesko.com
+radimpesko.com
+
+*/
+@font-face {
+  font-family: "Agipo";
+  font-style:   normal;
+  font-weight:  700;
+  font-stretch: condensed;
+  font-display: auto;
+  src:          url('6ade49af-5cd3-4f62-9c44-ba3205527cfe.woff2') format('woff2'),
+                url('6ade49af-5cd3-4f62-9c44-ba3205527cfe.woff') format('woff'),
+                url('6ade49af-5cd3-4f62-9c44-ba3205527cfe.eot') format('embedded-opentype');
+}
