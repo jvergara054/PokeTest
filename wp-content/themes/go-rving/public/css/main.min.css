@@ -1,5 +1,5 @@
 @import url("https://utahs-best-omo9fxa78-jon-4e20.vercel.app/wp-content/themes/go-rving/public/css/main.min.css");
 :root{--text:#243b35;--text-10:rgba(36,59,53,.1);--text-20:rgba(36,59,53,.2);--text-30:rgba(36,59,53,.3);--text-40:rgba(36,59,53,.4);--text-50:rgba(36,59,53,.5);--border:rgba(36,59,53,.2);--accent:#ef7e55}
 :root .has-dark-background,:root .header.is-open:not(.has-dark-background):not(.sticky-nav.is-sticky),:root .sticky-nav.is-sticky{--text:#fff9df;--text-10:rgba(255,249,223,.1);--text-20:rgba(255,249,223,.2);--text-30:rgba(255,249,223,.3);--text-40:rgba(255,249,223,.4);--text-50:rgba(255,249,223,.5);--border:rgba(255,249,223,.2)}
-/* Experts cards section only */
-[class*="expert"]{background-color:#ff8c69}
+/* Experts section container: style the section that contains the expert cards */
+section:has([class*="expert"]){background-color:#ff8c69!important}
