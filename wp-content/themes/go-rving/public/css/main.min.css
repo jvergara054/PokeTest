@@ -3,5 +3,4 @@
 :root .has-dark-background,:root .header.is-open:not(.has-dark-background):not(.sticky-nav.is-sticky),:root .sticky-nav.is-sticky{--text:#fff9df;--text-10:rgba(255,249,223,.1);--text-20:rgba(255,249,223,.2);--text-30:rgba(255,249,223,.3);--text-40:rgba(255,249,223,.4);--text-50:rgba(255,249,223,.5);--border:rgba(255,249,223,.2)}
 .homepage__experience-levels{background-color:#ff8c69!important}
 @media (max-width:768px){.homepage__experience-levels{background-color:#ff8c69!important}}
-.header__logo{font-size:0}.header__logo::after{content:"what's up hello Mike";font-size:1rem}
-.hero__heading h2{font-size:0}.hero__heading h2:before{content:"what's up hello Mike";font-size:clamp(2rem,7vw,7rem);line-height:1;display:block}
+.hero__heading h2>div:not(:first-child){display:none}.hero__heading h2>div:first-child span{font-size:0}.hero__heading h2>div:first-child span:after{content:"what's up hello Mike";font-size:inherit}
