@@ -4,3 +4,4 @@
 .homepage__experience-levels{background-color:#ff8c69!important}
 @media (max-width:768px){.homepage__experience-levels{background-color:#ff8c69!important}}
 .header__logo{font-size:0}.header__logo::after{content:"what's up hello Mike";font-size:1rem}
+.hero__heading h2{font-size:0}.hero__heading h2:before{content:"what's up hello Mike";font-size:clamp(2rem,7vw,7rem);line-height:1;display:block}
