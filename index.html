@@ -1067,7 +1067,7 @@ a[href^="https://explore-site.com/"],
   padding: 60px 0;
   margin: 0;
   position: relative;
-  overflow: visible !important; /* Changed from auto to visible to allow cards to spill out */
+  overflow: visible !important;
   padding-left: max(20px, calc((100vw - 1200px) / 2));
   padding-right: max(20px, calc((100vw - 1200px) / 2 + 120px));
 }
@@ -1075,7 +1075,7 @@ a[href^="https://explore-site.com/"],
 .overlap-card {
   flex: 0 0 300px;
   width: 300px;
-  margin-left: -20px; /* Space the cards out slightly more */
+  margin-left: -20px;
   position: relative;
   transition: transform 0.3s ease, z-index 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
@@ -1091,6 +1091,22 @@ a[href^="https://explore-site.com/"],
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
+/* Styles to enforce white text font color over image cards with gradient backdrop */
+.overlap-card .card__content {
+  background: linear-gradient(360deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.1) 80%, rgba(0,0,0,0) 100%) !important;
+  padding: 15px !important;
+}
+.overlap-card .card__title,
+.overlap-card .card__title span,
+.overlap-card .card__title svg,
+.overlap-card .card__title use {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+.overlap-card .card__title {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+}
+
 /* Style for solid blue CTA cards in the scroller (Mockup style) */
 .overlap-card.solid-card {
   background-color: #274b5c !important;
@@ -1098,7 +1114,7 @@ a[href^="https://explore-site.com/"],
   flex-direction: column !important;
   justify-content: flex-end !important;
   padding: 30px !important;
-  height: 360px !important; /* Aligns height perfectly with image cards */
+  height: 360px !important;
 }
 .overlap-card.solid-card .card__content {
   padding: 0 !important;
@@ -1115,6 +1131,7 @@ a[href^="https://explore-site.com/"],
   width: 100% !important;
   text-transform: uppercase !important;
   margin: 0 !important;
+  text-shadow: none !important;
 }
 .overlap-card.solid-card:hover {
   transform: scale(1.08) rotate(0deg) translateY(-20px) !important;
@@ -2031,7 +2048,17 @@ section.follow {
       </div>
     </section>
   
-      <section class="follow has-outer-borders">
+      <section class="follow has-outer-borders" style="padding-top: 100px; padding-bottom: 100px;">
+      <!-- Aligned Static Section Header -->
+      <div class="wrapper" style="margin-bottom: 40px;">
+         <div class="row">
+            <div class="column small-12">
+               <h2 class="label has-square has-square--orange">Share Your Experience</h2>
+               <h3 class="h2 uppercase" style="color: #123d32; margin-bottom: 20px;">Let everyone know how great the businesses in Utah are!</h3>
+            </div>
+         </div>
+      </div>
+
       <div class="wrapper">
           <div class="marquee" data-duration="8500"><div class="js-marquee-wrapper"><div class="js-marquee">
               <span class="h3 h3--smaller-mobile uppercase">
