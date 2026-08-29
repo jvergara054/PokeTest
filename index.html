@@ -1155,6 +1155,7 @@ section.follow {
 
 /* Overrides to prevent the theme's slider container from clipping our wide card deck */
 .side-slider.side-slider--auto,
+.side-slider.side-slider--custom-auto,
 .side-slider {
   overflow: visible !important;
 }
@@ -1185,6 +1186,11 @@ div[id^="breadbutter-"] {
   display: none !important;
   opacity: 0 !important;
   pointer-events: none !important;
+}
+
+/* Style follow section pin-spacer to match its background color */
+.pin-spacer:has(.follow) {
+  background-color: #4f87c7 !important;
 }
 
 @media (max-width: 768px) {
@@ -2097,7 +2103,7 @@ div[id^="breadbutter-"] {
       </div>
 
       <!-- Restored GSAP scroll trigger slider -->
-      <div class="side-slider side-slider--auto">
+      <div class="side-slider side-slider--custom-auto">
         <div class="row overlap-card-container">
           <!-- Card 1: Follow Us (Instagram CTA from screenshot, layered at z-index 1) -->
           <a href="https://www.instagram.com/gorvingcanada" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-1.5deg) translateY(5px); z-index: 1;">
@@ -2469,12 +2475,57 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 
 <script async="" src="wp-includes/js/search-insights.js"></script><!-- Removed Chatbase elements --><script>
   window.addEventListener('load', () => {
-    if (typeof ScrollTrigger !== 'undefined') {
+    // Custom GSAP horizontal scroll registration for Utah's Best card deck
+    const slider = document.querySelector('.side-slider--custom-auto');
+    if (slider && typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
       setTimeout(() => {
-        console.log("Sorting and refreshing ScrollTriggers on window load...");
+        const container = slider.querySelector('.overlap-card-container');
+        const cards = container.children;
+        const lastCard = cards[cards.length - 1];
+        
+        // Calculate max horizontal overflow width
+        const containerWidth = container.scrollWidth;
+        const viewportWidth = window.innerWidth;
+        const maxScroll = Math.max(0, containerWidth - viewportWidth + 80);
+        
+        // Keep vertical pin duration short and snappy to avoid blank gaps
+        const pinDuration = Math.min(1000, maxScroll);
+        
+        // Register custom ScrollTrigger pinning on the follow section
+        ScrollTrigger.create({
+          trigger: slider.closest('section'),
+          start: "top top", // Pin when the section hits the top of the screen
+          end: `+=${pinDuration}`,
+          pin: true,
+          pinSpacing: true,
+          scrub: 0.25,
+          id: "follow-pin"
+        });
+        
+        // Animate horizontal translation of the card row
+        gsap.to(container, {
+          x: -maxScroll,
+          ease: "none",
+          scrollTrigger: {
+            trigger: slider.closest('section'),
+            start: "top top",
+            end: `+=${pinDuration}`,
+            scrub: 0.25
+          }
+        });
+
+        // Refresh triggers to compute new dimensions
         ScrollTrigger.sort();
         ScrollTrigger.refresh();
-      }, 500);
+      }, 300);
+    } else {
+      // Fallback sort and refresh if custom slider not found
+      if (typeof ScrollTrigger !== 'undefined') {
+        setTimeout(() => {
+          ScrollTrigger.sort();
+          ScrollTrigger.refresh();
+        }, 500);
+      }
     }
   });
 </script>
