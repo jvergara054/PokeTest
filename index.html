@@ -794,59 +794,10 @@ a[href^="https://explore-site.com/"],
   pointer-events: auto !important;
 }
 
-#scroll {
-  position: static !important;
-  width: 100% !important;
-  height: auto !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: none !important;
-}
 #leaderboard {
-  position: static !important;
-  width: 100% !important;
-  height: auto !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: none !important;
-  display: block !important;
-}
-
-.categories-experience-levels {
   background-color: #f6f4ed !important;
-  padding: 80px 0 !important;
+  border-top: 1px solid #dfe5df;
   border-bottom: 1px solid #dfe5df;
-}
-
-.horizontal-scroll-row {
-  display: flex !important;
-  flex-wrap: nowrap !important;
-  overflow-x: auto !important;
-  -webkit-overflow-scrolling: touch;
-  gap: 20px;
-  padding: 20px 0 !important;
-  margin: 0 !important;
-  scrollbar-width: thin;
-  scrollbar-color: #fc6b3e rgba(18, 61, 50, 0.05);
-}
-
-.horizontal-scroll-row::-webkit-scrollbar {
-  height: 6px;
-}
-.horizontal-scroll-row::-webkit-scrollbar-track {
-  background: rgba(18, 61, 50, 0.05);
-  border-radius: 10px;
-}
-.horizontal-scroll-row::-webkit-scrollbar-thumb {
-  background: #fc6b3e;
-  border-radius: 10px;
-}
-
-.horizontal-scroll-row .column {
-  flex: 0 0 280px !important;
-  width: 280px !important;
-  max-width: 280px !important;
-  padding: 0 !important;
 }
 
 #leaderboard-list {
@@ -1295,155 +1246,392 @@ a[href^="https://explore-site.com/"],
       </div>
     </section>
     <div id="scroll">
-            <div class="categories-container-wrap"><section class="categories-experience-levels has-outer-borders">
+            <div class="pin-spacer" style="z-index: auto; display: block;"><section class="homepage__experience-levels has-outer-borders" style="background-color: rgba(0, 0, 0, 0);">
       <div class="wrapper">
-        <div class="categories-slider-wrapper">
-          <div class="row" style="display: flex; gap: 40px; flex-wrap: wrap;">
-            <!-- Left Column: Food & Outdoors -->
-            <div class="column small-12 xlarge-6" style="flex: 1; min-width: 300px; margin-bottom: 40px;">
-              <h2 class="label has-square has-square--orange">Discover Local</h2>
-              <h3 class="h2 uppercase" style="color: #123d32;">Food & Outdoors</h3>
-              <div class="categories-track" style="position: relative;">
-                <svg class="icon icon--full-squiggle" style="position: absolute; top: 50%; left: 0; width: 100%; transform: translateY(-50%); pointer-events: none; z-index: 1;"><use xlink:href="#full-squiggle"></use></svg>
-                <div class="horizontal-scroll-row">
-                  <!-- Card 1: Food & Drink -->
-                  <div class="column">
-                    <div class="card card--feature card--simple card--small has-dark-background" style="position: relative; z-index: 2;">
-                      <div class="card__media">
-                        <div class="media-wrapper media-wrapper--image">
-                          <div class="media-placeholder" style="padding-bottom: 120%;">
-                            <img data-src="wp-content/uploads/2026/08/Baltimore-Oriole-how-to-start-birdwatching-1440x960.jpg" alt="Food & Drink" class="lazy-image">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card__content">
-                        <a href="javascript:void(0)" onclick="window.setLeaderboardFilter('food')" class="card__title h5">
-                          <span class="hyphenate">Food & Drink</span>
-                          <span class="button button--xxsmall button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
-                        </a>
-                      </div>
-                    </div>
+        <div class="side-slider side-slider--auto">
+          <div class="row">
+                                        <div class="column small-12 xlarge-9">
+                                  <h2 class="label has-square has-square--orange">Discover Local</h2>
+                                <h3 class="h2 uppercase">Eat & Play</h3>
+                <div class="side-slider">
+                                      <svg class="icon icon--full-squiggle"><use xlink:href="#full-squiggle"></use></svg>
+                                                                          <div class="row">
+                                              <div class="column small-4">
+                                                                                                                      <div class="card card--feature card--simple card--small has-dark-background">
+    <div class="card__media">
+                              <div class="media-wrapper media-wrapper--image"><div class="media-placeholder" style="padding-bottom: 120%;"><img data-src="wp-content/uploads/2024/10/truck-camper-easy-to-drive-450x530.jpg" data-srcset="wp-content/uploads/2024/10/truck-camper-easy-to-drive-450x530.jpg 1x,wp-content/uploads/2024/10/truck-camper-easy-to-drive-450x530.jpg 2x" alt="" class="lazy-image"></div></div>          </div>
+    <div class="card__content">
+            <a href="javascript:void(0)" onclick="window.setLeaderboardFilter('food')" target="" class="card__title h5">
+                  <span class="hyphenate">Food & Drink</span>
+                <span class="button button--xxsmall button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+      </a>
+    </div>
+  </div>
+                                      </div>
+                                              <div class="column small-4">
+                                                                                                                      <div class="card card--feature card--simple card--small has-dark-background">
+    <div class="card__media">
+                              <div class="media-wrapper media-wrapper--image"><div class="media-placeholder" style="padding-bottom: 120%;"><img data-src="wp-content/uploads/2024/07/campers-with-trailer-campground-450x540.jpg" data-srcset="wp-content/uploads/2024/07/campers-with-trailer-campground-450x540.jpg 1x,wp-content/uploads/2024/07/campers-with-trailer-campground-450x540@2x.jpg 2x" alt="" class="lazy-image"></div></div>          </div>
+    <div class="card__content">
+            <a href="javascript:void(0)" onclick="window.setLeaderboardFilter('outdoors')" target="" class="card__title h5">
+                  <span class="hyphenate">Outdoors</span>
+                <span class="button button--xxsmall button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+      </a>
+    </div>
+  </div>
+                                      </div>
+                                              <div class="column small-4">
+                                                                                                                      <div class="card card--feature card--simple card--small has-dark-background">
+    <div class="card__media">
+                              <div class="media-wrapper media-wrapper--image"><div class="media-placeholder" style="padding-bottom: 120%;"><img data-src="wp-content/uploads/2023/06/cote-nord-camping-airstream-450x540.jpg" data-srcset="wp-content/uploads/2023/06/cote-nord-camping-airstream-450x540.jpg 1x,wp-content/uploads/2023/06/cote-nord-camping-airstream-450x540.jpg 2x" alt="" class="lazy-image"></div></div>          </div>
+    <div class="card__content">
+            <a href="javascript:void(0)" onclick="window.setLeaderboardFilter('all')" target="" class="card__title h5">
+                  <span class="hyphenate">All Categories</span>
+                <span class="button button--xxsmall button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+      </a>
+    </div>
+  </div>
+                                      </div>
+                                          </div>
+                                  </div>
+                <div class="wysiwyg">
+                  <p>Explore Utah's premier dining spots, cafes, breweries, and outdoor adventures.</p>
+                                      <a href="https://gorving.ca/rv-beginners-guide/" target="" class="arrow-link">
+    Explore Dining <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
                   </div>
-                  <!-- Card 2: Outdoors -->
-                  <div class="column">
-                    <div class="card card--feature card--simple card--small has-dark-background" style="position: relative; z-index: 2;">
-                      <div class="card__media">
-                        <div class="media-wrapper media-wrapper--image">
-                          <div class="media-placeholder" style="padding-bottom: 120%;">
-                            <img data-src="wp-content/uploads/2026/05/GRVC-LTT_foodie.jpg" alt="Outdoors" class="lazy-image">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card__content">
-                        <a href="javascript:void(0)" onclick="window.setLeaderboardFilter('outdoors')" class="card__title h5">
-                          <span class="hyphenate">Outdoors</span>
-                          <span class="button button--xxsmall button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Card 3: All Categories -->
-                  <div class="column">
-                    <div class="card card--feature card--simple card--small has-dark-background" style="position: relative; z-index: 2;">
-                      <div class="card__media">
-                        <div class="media-wrapper media-wrapper--image">
-                          <div class="media-placeholder" style="padding-bottom: 120%;">
-                            <img data-src="wp-content/uploads/2024/07/campers-with-trailer-campground-450x540.jpg" alt="All Categories" class="lazy-image">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card__content">
-                        <a href="javascript:void(0)" onclick="window.setLeaderboardFilter('all')" class="card__title h5">
-                          <span class="hyphenate">All Categories</span>
-                          <span class="button button--xxsmall button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
-              <div class="wysiwyg" style="margin-top: 20px;">
-                <p style="color: #123d32;">Explore Utah's premier dining spots and outdoor adventures. Click any category to filter the leaderboard list directly below.</p>
-                <a href="#leaderboard" onclick="window.setLeaderboardFilter('all')" class="arrow-link" style="color: #fc6b3e; font-weight: bold;">
-                  Explore All <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
-                </a>
-              </div>
-            </div>
-            <!-- Right Column: Services & Wellness -->
-            <div class="column small-12 xlarge-6" style="flex: 1; min-width: 300px; margin-bottom: 40px;">
-              <h2 class="label has-square has-square--orange">Discover Local</h2>
-              <h3 class="h2 uppercase" style="color: #123d32;">Services & Wellness</h3>
-              <div class="categories-track" style="position: relative;">
-                <svg class="icon icon--full-squiggle" style="position: absolute; top: 50%; left: 0; width: 100%; transform: translateY(-50%); pointer-events: none; z-index: 1;"><use xlink:href="#full-squiggle"></use></svg>
-                <div class="horizontal-scroll-row">
-                  <!-- Card 1: Wellness -->
-                  <div class="column">
-                    <div class="card card--feature card--simple card--small has-dark-background" style="position: relative; z-index: 2;">
-                      <div class="card__media">
-                        <div class="media-wrapper media-wrapper--image">
-                          <div class="media-placeholder" style="padding-bottom: 120%;">
-                            <img data-src="wp-content/uploads/2025/08/Go-Rving-Toronto-RV-Show-2025-65-1440x960.jpg" alt="Wellness" class="lazy-image">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card__content">
-                        <a href="javascript:void(0)" onclick="window.setLeaderboardFilter('wellness')" class="card__title h5">
-                          <span class="hyphenate">Wellness</span>
-                          <span class="button button--xxsmall button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
-                        </a>
-                      </div>
-                    </div>
+                                        <div class="column small-12 xlarge-9">
+                                <h3 class="h2 uppercase">Shop & Stay</h3>
+                <div class="side-slider">
+                                                                          <div class="row">
+                                              <div class="column small-4">
+                                                                                                                      <div class="card card--feature card--simple card--small has-dark-background">
+    <div class="card__media">
+                              <div class="media-wrapper media-wrapper--image"><div class="media-placeholder" style="padding-bottom: 120%;"><img data-src="wp-content/uploads/2024/10/GoRVingJRNYFallRockesRoadtrip-motorhome-450x540.jpg" data-srcset="wp-content/uploads/2024/10/GoRVingJRNYFallRockesRoadtrip-motorhome-450x540.jpg 1x,wp-content/uploads/2024/10/GoRVingJRNYFallRockesRoadtrip-motorhome-450x540@2x.jpg 2x" alt="" class="lazy-image"></div></div>          </div>
+    <div class="card__content">
+            <a href="javascript:void(0)" onclick="window.setLeaderboardFilter('wellness')" target="" class="card__title h5">
+                  <span class="hyphenate">Wellness</span>
+                <span class="button button--xxsmall button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+      </a>
+    </div>
+  </div>
+                                      </div>
+                                              <div class="column small-4">
+                                                                                                                      <div class="card card--feature card--simple card--small has-dark-background">
+    <div class="card__media">
+                              <div class="media-wrapper media-wrapper--image"><div class="media-placeholder" style="padding-bottom: 120%;"><img data-src="wp-content/uploads/2024/10/GoRVingOttawaValleyJune2023JRNYMediaImage-47-web-450x540.jpg" data-srcset="wp-content/uploads/2024/10/GoRVingOttawaValleyJune2023JRNYMediaImage-47-web-450x540.jpg 1x,wp-content/uploads/2024/10/GoRVingOttawaValleyJune2023JRNYMediaImage-47-web-450x540.jpg 2x" alt="" class="lazy-image"></div></div>          </div>
+    <div class="card__content">
+            <a href="javascript:void(0)" onclick="window.setLeaderboardFilter('services')" target="" class="card__title h5">
+                  <span class="hyphenate">Services</span>
+                <span class="button button--xxsmall button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+      </a>
+    </div>
+  </div>
+                                      </div>
+                                              <div class="column small-4">
+                                                                                                                      <div class="card card--feature card--simple card--small has-dark-background">
+    <div class="card__media">
+                              <div class="media-wrapper media-wrapper--image"><div class="media-placeholder" style="padding-bottom: 120%;"><img data-src="wp-content/uploads/2024/01/Bryan-Baeumler_Hitching-RV-mobile-scaled-1-450x540.jpg" data-srcset="wp-content/uploads/2024/01/Bryan-Baeumler_Hitching-RV-mobile-scaled-1-450x540.jpg 1x,wp-content/uploads/2024/01/Bryan-Baeumler_Hitching-RV-mobile-scaled-1-450x540@2x.jpg 2x" alt="Bryan Baeumler and son hitching Jeep to RV" class="lazy-image"></div></div>          </div>
+    <div class="card__content">
+            <a href="javascript:void(0)" onclick="window.openBiddingModal()" target="" class="card__title h5">
+                  <span class="hyphenate">List Business</span>
+                <span class="button button--xxsmall button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+      </a>
+    </div>
+  </div>
+                                      </div>
+                                          </div>
+                                  </div>
+                <div class="wysiwyg">
+                  <p class="ai-optimize-6">Find trusted professional services, retail shops, and world-class health, spa, and beauty retreats.</p>
+                                      <a href="https://gorving.ca/tips-lifestyle/" target="" class="arrow-link">
+    List Business <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
                   </div>
-                  <!-- Card 2: Services -->
-                  <div class="column">
-                    <div class="card card--feature card--simple card--small has-dark-background" style="position: relative; z-index: 2;">
-                      <div class="card__media">
-                        <div class="media-wrapper media-wrapper--image">
-                          <div class="media-placeholder" style="padding-bottom: 120%;">
-                            <img data-src="wp-content/uploads/2024/07/WildhoodCrewneckGreen-1440x725.jpg" alt="Services" class="lazy-image">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card__content">
-                        <a href="javascript:void(0)" onclick="window.setLeaderboardFilter('services')" class="card__title h5">
-                          <span class="hyphenate">Services</span>
-                          <span class="button button--xxsmall button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Card 3: List Business -->
-                  <div class="column">
-                    <div class="card card--feature card--simple card--small has-dark-background" style="position: relative; z-index: 2;">
-                      <div class="card__media">
-                        <div class="media-wrapper media-wrapper--image">
-                          <div class="media-placeholder" style="padding-bottom: 120%;">
-                            <img data-src="wp-content/uploads/2023/06/cote-nord-camping-airstream-450x540.jpg" alt="List Your Business" class="lazy-image">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card__content">
-                        <a href="javascript:void(0)" onclick="window.openBiddingModal()" class="card__title h5">
-                          <span class="hyphenate">List Your Business</span>
-                          <span class="button button--xxsmall button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
-              <div class="wysiwyg" style="margin-top: 20px;">
-                <p style="color: #123d32;">Find trusted professional services and world-class health, spa, and beauty retreats throughout the state of Utah.</p>
-                <a href="javascript:void(0)" onclick="window.openBiddingModal()" class="arrow-link" style="color: #fc6b3e; font-weight: bold;">
-                  List Business <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
-                </a>
-              </div>
-            </div>
+                      </div>
+        </div>
+      </div>
+    </section></div>
+                  <div class="pin-spacer" style="z-index: auto; display: block;"><section class="homepage__rvs has-background-media has-dark-background has-outer-borders">
+      <div class="homepage__rvs__sidebar">
+        <div class="wrapper">
+          <div class="row">
+            <div class="column small-12 xlarge-6">
+              <h2 class="label has-square has-square--orange">Explore Industries</h2>
+              <ul class="homepage__rvs__types-list">
+                                                                                        <li>
+                    <a href="https://gorving.ca/rv-type/motorhomes/" class="h2 uppercase" onclick="window.setLeaderboardFilter('food')">
+                      Dine Local                    </a>
+                    <span>3</span>
+                  </li>
+                                                                                        <li>
+                    <a href="https://gorving.ca/rv-type/travel-trailers/" class="h2 uppercase" onclick="window.setLeaderboardFilter('outdoors')">
+                      Explore Outdoors                    </a>
+                    <span>7</span>
+                  </li>
+                                                                                        <li>
+                    <a href="https://gorving.ca/rv-type/park-models/" class="h2 uppercase" onclick="window.setLeaderboardFilter('wellness')">
+                      Health & Spas                    </a>
+                    <span>2</span>
+                  </li>
+                              </ul>
+                                                                                              <a href="#leaderboard" target="" class="button button--black large-up">
+    View Leaderboard <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                                                    <a href="#leaderboard" target="" class="button button--orange large-down">
+    View Leaderboard <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                            </div>
           </div>
         </div>
       </div>
-    </section></div><!-- LEADERBOARD SECTION (Replaces Latest) -->
-   <section id="leaderboard" class="vertical-split-scroller has-outer-borders" style="padding: 100px 0; background-color: #f6f4ed;">
+      <div class="homepage__rvs__main">
+                                      <div class="homepage__rvs__type">
+            <div class="homepage__rvs__type__left slick-arrow" style=""></div>
+            <div class="homepage__rvs__type__cursor button button--small button--orange">
+              <svg class="icon icon--chevron-left"><use xlink:href="#chevron-left"></use></svg> <span data-slide-num="">1</span> / 3 <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+            </div>
+            <div class="homepage__rvs__type__slider">
+                                              <div class="slick-list draggable"><div class="slick-track" style="opacity: 1;"><div class="homepage__rvs__model slick-slide" data-slick-index="0" aria-hidden="false" style="z-index: 999; opacity: 1;" tabindex="0">
+                                    <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Class_B_motorhome_hero-1440x960.jpg" data-srcset="wp-content/uploads/2024/10/Class_B_motorhome_hero-1440x960.jpg 1x,wp-content/uploads/2024/10/Class_B_motorhome_hero-1440x960@2x.jpg 2x" alt="Camper Van | Valter's Osteria | GoRving" class="lazy-image"></div></div>                  <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Class_B_motorhome_hero-768x512.jpg" data-srcset="wp-content/uploads/2024/10/Class_B_motorhome_hero-768x512.jpg 1x,wp-content/uploads/2024/10/Class_B_motorhome_hero-768x512@2x.jpg 2x" alt="Camper Van | Valter's Osteria | GoRving" class="lazy-image"></div></div>                  <div class="wrapper">
+                    <span class="label has-square has-square--orange" aria-hidden="true">Explore Industries</span>
+                    <div class="row">
+                      <div class="column small-12 xlarge-offset-6 xlarge-6">
+                        <h3 class="h5 uppercase">Valter's Osteria</h3>
+                                                                          <div class="wysiwyg">
+                            <p>Salt Lake's legendary, upscale Italian fine dining experience and chef's table.</p>                          </div>
+                                                                          <a href="https://valtersosteria.com" target="_blank" target="" class="button button--orange large-up" tabindex="0">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                                                    <a href="https://valtersosteria.com" target="_blank" target="" class="arrow-link large-down" tabindex="0">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                        </div>
+                    </div>
+                  </div>
+                </div><div class="homepage__rvs__model slick-slide" data-slick-index="1" aria-hidden="true" style="z-index: 998; opacity: 0;" tabindex="-1">
+                                    <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Class_A_motorhome_hero-1440x960.jpg" data-srcset="wp-content/uploads/2024/10/Class_A_motorhome_hero-1440x960.jpg 1x,wp-content/uploads/2024/10/Class_A_motorhome_hero-1440x960@2x.jpg 2x" alt="" class="lazy-image"></div></div>                  <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Class_A_motorhome_hero-768x512.jpg" data-srcset="wp-content/uploads/2024/10/Class_A_motorhome_hero-768x512.jpg 1x,wp-content/uploads/2024/10/Class_A_motorhome_hero-768x512@2x.jpg 2x" alt="" class="lazy-image"></div></div>                  <div class="wrapper">
+                    <span class="label has-square has-square--orange" aria-hidden="true">Explore Industries</span>
+                    <div class="row">
+                      <div class="column small-12 xlarge-offset-6 xlarge-6">
+                        <h3 class="h5 uppercase">Log Haven Restaurant</h3>
+                                                                          <div class="wysiwyg">
+                            <p>Romance and fine dining in a historic log mansion nestled in Millcreek Canyon.</p>                          </div>
+                                                                          <a href="https://valtersosteria.com" target="_blank" target="" class="button button--orange large-up" tabindex="-1">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                                                    <a href="https://valtersosteria.com" target="_blank" target="" class="arrow-link large-down" tabindex="-1">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                        </div>
+                    </div>
+                  </div>
+                </div><div class="homepage__rvs__model slick-slide" data-slick-index="2" aria-hidden="true" style="z-index: 998; opacity: 0;" tabindex="-1">
+                                    <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Class_C_motorhome_hero_new-1440x960.jpg" data-srcset="wp-content/uploads/2024/10/Class_C_motorhome_hero_new-1440x960.jpg 1x,wp-content/uploads/2024/10/Class_C_motorhome_hero_new-1440x960@2x.jpg 2x" alt="Ruth's Chris Salt Lake | Family RV | GoRving" class="lazy-image"></div></div>                  <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Class_C_motorhome_hero_new-768x512.jpg" data-srcset="wp-content/uploads/2024/10/Class_C_motorhome_hero_new-768x512.jpg 1x,wp-content/uploads/2024/10/Class_C_motorhome_hero_new-768x512@2x.jpg 2x" alt="Ruth's Chris Salt Lake | Family RV | GoRving" class="lazy-image"></div></div>                  <div class="wrapper">
+                    <span class="label has-square has-square--orange" aria-hidden="true">Explore Industries</span>
+                    <div class="row">
+                      <div class="column small-12 xlarge-offset-6 xlarge-6">
+                        <h3 class="h5 uppercase">Ruth's Chris Salt Lake</h3>
+                                                                          <div class="wysiwyg">
+                            <p>Ruth's Chris Salt Lakes are easily recognizable by the over-the-cab area that is often an optional sleeping area.</p>                          </div>
+                                                                          <a href="https://valtersosteria.com" target="_blank" target="" class="button button--orange large-up" tabindex="-1">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                                                    <a href="https://valtersosteria.com" target="_blank" target="" class="arrow-link large-down" tabindex="-1">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                        </div>
+                    </div>
+                  </div>
+                </div></div></div>
+                                              
+                                              
+                          <button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button></div>
+          </div>
+                                      <div class="homepage__rvs__type">
+            <div class="homepage__rvs__type__left slick-arrow" style=""></div>
+            <div class="homepage__rvs__type__cursor button button--small button--orange">
+              <svg class="icon icon--chevron-left"><use xlink:href="#chevron-left"></use></svg> <span data-slide-num="">1</span> / 7 <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+            </div>
+            <div class="homepage__rvs__type__slider">
+                                              <div class="slick-list draggable"><div class="slick-track" style="opacity: 1;"><div class="homepage__rvs__model slick-slide" data-slick-index="0" aria-hidden="false" style="z-index: 999; opacity: 1;" tabindex="0">
+                                    <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Travel-Trailer-canada-1440x960.jpg" data-srcset="wp-content/uploads/2024/10/Travel-Trailer-canada-1440x960.jpg 1x,wp-content/uploads/2024/10/Travel-Trailer-canada-1440x960@2x.jpg 2x" alt="Utah Mountain Adventures | GoRving" class="lazy-image"></div></div>                  <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Travel-Trailer-canada-768x512.jpg" data-srcset="wp-content/uploads/2024/10/Travel-Trailer-canada-768x512.jpg 1x,wp-content/uploads/2024/10/Travel-Trailer-canada-768x512@2x.jpg 2x" alt="Utah Mountain Adventures | GoRving" class="lazy-image"></div></div>                  <div class="wrapper">
+                    <span class="label has-square has-square--orange" aria-hidden="true">Explore Industries</span>
+                    <div class="row">
+                      <div class="column small-12 xlarge-offset-6 xlarge-6">
+                        <h3 class="h5 uppercase">Utah Mountain Adventures</h3>
+                                                                          <div class="wysiwyg">
+                            <p>The Utah Mountain Adventures is the most common RV and comes in a range of styles to suit different lifestyles.</p>                          </div>
+                                                                          <a href="https://utahmountainadventures.com" target="_blank" target="" class="button button--orange large-up" tabindex="0">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                                                    <a href="https://utahmountainadventures.com" target="_blank" target="" class="arrow-link large-down" tabindex="0">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                        </div>
+                    </div>
+                  </div>
+                </div><div class="homepage__rvs__model slick-slide" data-slick-index="1" aria-hidden="true" style="z-index: 998; opacity: 0;" tabindex="-1">
+                                    <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Fifth_Wheel_hero-1440x960.jpg" data-srcset="wp-content/uploads/2024/10/Fifth_Wheel_hero-1440x960.jpg 1x,wp-content/uploads/2024/10/Fifth_Wheel_hero-1440x960@2x.jpg 2x" alt="Snowbird Activity Center | GoRving" class="lazy-image"></div></div>                  <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Fifth_Wheel_hero-768x512.jpg" data-srcset="wp-content/uploads/2024/10/Fifth_Wheel_hero-768x512.jpg 1x,wp-content/uploads/2024/10/Fifth_Wheel_hero-768x512@2x.jpg 2x" alt="Snowbird Activity Center | GoRving" class="lazy-image"></div></div>                  <div class="wrapper">
+                    <span class="label has-square has-square--orange" aria-hidden="true">Explore Industries</span>
+                    <div class="row">
+                      <div class="column small-12 xlarge-offset-6 xlarge-6">
+                        <h3 class="h5 uppercase">Snowbird Activity Center</h3>
+                                                                          <div class="wysiwyg">
+                            <p>Tram rides, mountain coasters, alpine slides, and scenic hikes in Little Cottonwood Canyon.</p>                          </div>
+                                                                          <a href="https://snowbird.com" target="_blank" target="" class="button button--orange large-up" tabindex="-1">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                                                    <a href="https://snowbird.com" target="_blank" target="" class="arrow-link large-down" tabindex="-1">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                        </div>
+                    </div>
+                  </div>
+                </div><div class="homepage__rvs__model slick-slide" data-slick-index="2" aria-hidden="true" style="z-index: 998; opacity: 0;" tabindex="-1">
+                                    <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/PopUp_Trailer_hero-1440x960.jpg" data-srcset="wp-content/uploads/2024/10/PopUp_Trailer_hero-1440x960.jpg 1x,wp-content/uploads/2024/10/PopUp_Trailer_hero-1440x960@2x.jpg 2x" alt="" class="lazy-image"></div></div>                  <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/PopUp_Trailer_hero-768x512.jpg" data-srcset="wp-content/uploads/2024/10/PopUp_Trailer_hero-768x512.jpg 1x,wp-content/uploads/2024/10/PopUp_Trailer_hero-768x512@2x.jpg 2x" alt="" class="lazy-image"></div></div>                  <div class="wrapper">
+                    <span class="label has-square has-square--orange" aria-hidden="true">Explore Industries</span>
+                    <div class="row">
+                      <div class="column small-12 xlarge-offset-6 xlarge-6">
+                        <h3 class="h5 uppercase">Zion National Park Guides</h3>
+                                                                          <div class="wysiwyg">
+                            <p>Custom guided backcountry adventures and slot canyon expeditions across southern Utah.</p>                          </div>
+                                                                          <a href="https://utahmountainadventures.com" target="_blank" target="" class="button button--orange large-up" tabindex="-1">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                                                    <a href="https://utahmountainadventures.com" target="_blank" target="" class="arrow-link large-down" tabindex="-1">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                        </div>
+                    </div>
+                  </div>
+                </div><div class="homepage__rvs__model slick-slide" data-slick-index="3" aria-hidden="true" style="z-index: 998; opacity: 0;" tabindex="-1">
+                                    <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Tear-Drop-1440x960.jpg" data-srcset="wp-content/uploads/2024/10/Tear-Drop-1440x960.jpg 1x,wp-content/uploads/2024/10/Tear-Drop-1440x960@2x.jpg 2x" alt="" class="lazy-image"></div></div>                  <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Tear-Drop-768x512.jpg" data-srcset="wp-content/uploads/2024/10/Tear-Drop-768x512.jpg 1x,wp-content/uploads/2024/10/Tear-Drop-768x512@2x.jpg 2x" alt="" class="lazy-image"></div></div>                  <div class="wrapper">
+                    <span class="label has-square has-square--orange" aria-hidden="true">Explore Industries</span>
+                    <div class="row">
+                      <div class="column small-12 xlarge-offset-6 xlarge-6">
+                        <h3 class="h5 uppercase">Teardrop Trailer</h3>
+                                                                          <div class="wysiwyg">
+                            <p>Teardrop RVs are perfect for the minimalist traveler. These RVs can easily be towed behind a sedan or small SUV.</p>                          </div>
+                                                                          <a href="https://gorving.ca/rv/teardrop-trailer/" target="" class="button button--orange large-up" tabindex="-1">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                                                    <a href="https://gorving.ca/rv/teardrop-trailer/" target="" class="arrow-link large-down" tabindex="-1">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                        </div>
+                    </div>
+                  </div>
+                </div><div class="homepage__rvs__model slick-slide" data-slick-index="4" aria-hidden="true" style="z-index: 998; opacity: 0;" tabindex="-1">
+                                    <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Truck-Camper-RV_hero-1440x960.jpg" data-srcset="wp-content/uploads/2024/10/Truck-Camper-RV_hero-1440x960.jpg 1x,wp-content/uploads/2024/10/Truck-Camper-RV_hero-1440x960@2x.jpg 2x" alt="" class="lazy-image"></div></div>                  <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Truck-Camper-RV_hero-768x512.jpg" data-srcset="wp-content/uploads/2024/10/Truck-Camper-RV_hero-768x512.jpg 1x,wp-content/uploads/2024/10/Truck-Camper-RV_hero-768x512@2x.jpg 2x" alt="" class="lazy-image"></div></div>                  <div class="wrapper">
+                    <span class="label has-square has-square--orange" aria-hidden="true">Explore Industries</span>
+                    <div class="row">
+                      <div class="column small-12 xlarge-offset-6 xlarge-6">
+                        <h3 class="h5 uppercase">Truck Camper</h3>
+                                                                          <div class="wysiwyg">
+                            <p>The Truck Camper is designed to sit in the truck bed with all the conveniences of a larger RV.</p>                          </div>
+                                                                          <a href="https://gorving.ca/rv/truck-camper/" target="" class="button button--orange large-up" tabindex="-1">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                                                    <a href="https://gorving.ca/rv/truck-camper/" target="" class="arrow-link large-down" tabindex="-1">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                        </div>
+                    </div>
+                  </div>
+                </div><div class="homepage__rvs__model slick-slide" data-slick-index="5" aria-hidden="true" style="z-index: 998; opacity: 0;" tabindex="-1">
+                                    <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Toy-Hauler_hero_new-1440x960.jpg" data-srcset="wp-content/uploads/2024/10/Toy-Hauler_hero_new-1440x960.jpg 1x,wp-content/uploads/2024/10/Toy-Hauler_hero_new-1440x960@2x.jpg 2x" alt="" class="lazy-image"></div></div>                  <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Toy-Hauler_hero_new-768x512.jpg" data-srcset="wp-content/uploads/2024/10/Toy-Hauler_hero_new-768x512.jpg 1x,wp-content/uploads/2024/10/Toy-Hauler_hero_new-768x512@2x.jpg 2x" alt="" class="lazy-image"></div></div>                  <div class="wrapper">
+                    <span class="label has-square has-square--orange" aria-hidden="true">Explore Industries</span>
+                    <div class="row">
+                      <div class="column small-12 xlarge-offset-6 xlarge-6">
+                        <h3 class="h5 uppercase">Toy Hauler</h3>
+                                                                          <div class="wysiwyg">
+                            <p>Toy-Hauler RVs have a swing-down ramp and enough cargo space for a variety of off-road vehicles such as ATVs, dirt...</p>                          </div>
+                                                                          <a href="https://gorving.ca/rv/toy-hauler/" target="" class="button button--orange large-up" tabindex="-1">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                                                    <a href="https://gorving.ca/rv/toy-hauler/" target="" class="arrow-link large-down" tabindex="-1">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                        </div>
+                    </div>
+                  </div>
+                </div><div class="homepage__rvs__model slick-slide" data-slick-index="6" aria-hidden="true" style="z-index: 998; opacity: 0;" tabindex="-1">
+                                    <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Hybrid-Trailer_hero-2-1440x960.jpg" data-srcset="wp-content/uploads/2024/10/Hybrid-Trailer_hero-2-1440x960.jpg 1x,wp-content/uploads/2024/10/Hybrid-Trailer_hero-2-1440x960@2x.jpg 2x" alt="" class="lazy-image"></div></div>                  <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Hybrid-Trailer_hero-2-768x512.jpg" data-srcset="wp-content/uploads/2024/10/Hybrid-Trailer_hero-2-768x512.jpg 1x,wp-content/uploads/2024/10/Hybrid-Trailer_hero-2-768x512@2x.jpg 2x" alt="" class="lazy-image"></div></div>                  <div class="wrapper">
+                    <span class="label has-square has-square--orange" aria-hidden="true">Explore Industries</span>
+                    <div class="row">
+                      <div class="column small-12 xlarge-offset-6 xlarge-6">
+                        <h3 class="h5 uppercase">Hybrid Trailer</h3>
+                                                                          <div class="wysiwyg">
+                            <p>The hybrid travel trailer is a cross between a hard-sided travel trailer and a tent camping trailer.</p>                          </div>
+                                                                          <a href="https://gorving.ca/rv/hybrid-trailer/" target="" class="button button--orange large-up" tabindex="-1">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                                                    <a href="https://gorving.ca/rv/hybrid-trailer/" target="" class="arrow-link large-down" tabindex="-1">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                        </div>
+                    </div>
+                  </div>
+                </div></div></div>
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                          <button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button></div>
+          </div>
+                                      <div class="homepage__rvs__type">
+            <div class="homepage__rvs__type__left slick-arrow" style=""></div>
+            <div class="homepage__rvs__type__cursor button button--small button--orange">
+              <svg class="icon icon--chevron-left"><use xlink:href="#chevron-left"></use></svg> <span data-slide-num="">1</span> / 2 <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+            </div>
+            <div class="homepage__rvs__type__slider">
+                                              <div class="slick-list draggable"><div class="slick-track" style="opacity: 1;"><div class="homepage__rvs__model slick-slide" data-slick-index="0" aria-hidden="false" style="z-index: 999; opacity: 1;" tabindex="0">
+                                    <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Park-Model_hero-1440x960.jpg" data-srcset="wp-content/uploads/2024/10/Park-Model_hero-1440x960.jpg 1x,wp-content/uploads/2024/10/Park-Model_hero-1440x960@2x.jpg 2x" alt="" class="lazy-image"></div></div>                  <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Park-Model_hero-768x512.jpg" data-srcset="wp-content/uploads/2024/10/Park-Model_hero-768x512.jpg 1x,wp-content/uploads/2024/10/Park-Model_hero-768x512@2x.jpg 2x" alt="" class="lazy-image"></div></div>                  <div class="wrapper">
+                    <span class="label has-square has-square--orange" aria-hidden="true">Explore Industries</span>
+                    <div class="row">
+                      <div class="column small-12 xlarge-offset-6 xlarge-6">
+                        <h3 class="h5 uppercase">Park Model</h3>
+                                                                          <div class="wysiwyg">
+                            <p>The Park Model provides all the comforts and conveniences of home. This is the cottage alternative. Onsite hook-ups are required.</p>                          </div>
+                                                                          <a href="https://snowbird.com/cliff-spa" target="_blank" target="" class="button button--orange large-up" tabindex="0">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                                                    <a href="https://snowbird.com/cliff-spa" target="_blank" target="" class="arrow-link large-down" tabindex="0">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                        </div>
+                    </div>
+                  </div>
+                </div><div class="homepage__rvs__model slick-slide" data-slick-index="1" aria-hidden="true" style="z-index: 998; opacity: 0;" tabindex="-1">
+                                    <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Destination-Travel-1440x960.jpg" data-srcset="wp-content/uploads/2024/10/Destination-Travel-1440x960.jpg 1x,wp-content/uploads/2024/10/Destination-Travel-1440x960@2x.jpg 2x" alt="" class="lazy-image"></div></div>                  <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.666666666667%;"><img data-src="wp-content/uploads/2024/10/Destination-Travel-768x512.jpg" data-srcset="wp-content/uploads/2024/10/Destination-Travel-768x512.jpg 1x,wp-content/uploads/2024/10/Destination-Travel-768x512@2x.jpg 2x" alt="" class="lazy-image"></div></div>                  <div class="wrapper">
+                    <span class="label has-square has-square--orange" aria-hidden="true">Explore Industries</span>
+                    <div class="row">
+                      <div class="column small-12 xlarge-offset-6 xlarge-6">
+                        <h3 class="h5 uppercase">Kapi Massage & Wellness</h3>
+                                                                          <div class="wysiwyg">
+                            <p>Similar to a large conventional Utah Mountain Adventures are designed for occasional moves and do not require a special highway permit.</p>                          </div>
+                                                                          <a href="https://snowbird.com/cliff-spa" target="_blank" target="" class="button button--orange large-up" tabindex="-1">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                                                    <a href="https://snowbird.com/cliff-spa" target="_blank" target="" class="arrow-link large-down" tabindex="-1">
+    Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                        </div>
+                    </div>
+                  </div>
+                </div></div></div>
+                                              
+                          <button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button></div>
+          </div>
+              </div>
+    </section></div>
+        <!-- LEADERBOARD SECTION (Replaces Latest) -->
+   <section id="leaderboard" class="has-outer-borders" style="padding: 100px 0; background-color: #f6f4ed; position: relative; z-index: 10;">
       <div class="wrapper">
          <div class="row">
             <div class="column small-12">
@@ -1472,7 +1660,7 @@ a[href^="https://explore-site.com/"],
    </section>
 
    <!-- HOW IT WORKS SECTION -->
-   <section id="how-it-works" class="homepage__experience-levels has-outer-borders" style="padding: 100px 0; background-color: #123d32;">
+   <section id="how-it-works" class="has-outer-borders" style="padding: 100px 0; background-color: #123d32; position: relative; z-index: 10;">
      <div class="wrapper">
        <div class="side-slider side-slider--auto">
          <div class="row">
@@ -1794,9 +1982,214 @@ a[href^="https://explore-site.com/"],
         renderListings();
       });
    </script>
+
+            <section class="quiz-callout has-outer-borders has-background-media has-dark-background">
+      <div class="wrapper">
+        <div class="quiz-callout__content">
+          <h2 class="label has-square has-square--orange">Take The Quiz</h2>
+          <h3 class="h3--smaller-mobile">
+            <span>
+              <span>I am:</span>
+              <div class="quiz-callout__content__slider">
+                                  <div class="slick-list draggable"><div class="slick-track" style="opacity: 1;"><span class="uppercase slick-slide" data-slick-index="0" aria-hidden="false" style="z-index: 999; opacity: 1;" tabindex="0">An Adventurer</span><span class="uppercase slick-slide" data-slick-index="1" aria-hidden="true" style="z-index: 998; opacity: 0;" tabindex="-1">A Water Enthusiast</span><span class="uppercase slick-slide" data-slick-index="2" aria-hidden="true" style="z-index: 998; opacity: 0;" tabindex="-1">A Workaholic</span></div></div>
+                                  
+                                  
+                              </div>
+            </span>
+          </h3>
+                      <img src="wp-content/uploads/2024/11/adventurer.svg" alt="" class="icon badge badge--1">                      <img src="wp-content/uploads/2024/11/water-enthusiast.svg" alt="" class="icon badge badge--2">                      <img src="wp-content/uploads/2024/11/workaholic.svg" alt="" class="icon badge badge--3">                                                    <a href="javascript:void(0)" onclick="window.setLeaderboardFilter('food')" target="" class="button button--orange">
+    Find Your RV Match <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+          </div>
+      </div>
+      <div class="quiz-callout__background-slider">
+                            <div class="slick-list draggable"><div class="slick-track" style="opacity: 1;"><div class="slick-slide" data-slick-index="0" aria-hidden="false" style="z-index: 999; opacity: 1;" tabindex="0">
+            <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 0%;"><img data-src="wp-content/uploads/2024/11/adventurer-scaled-1-1440x959.jpg" data-srcset="wp-content/uploads/2024/11/adventurer-scaled-1-1440x959.jpg 1x,wp-content/uploads/2024/11/adventurer-scaled-1-1440x959.jpg 2x" alt="" class="lazy-image"></div></div>            <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 0%;"><img data-src="wp-content/uploads/2024/11/adventurer-scaled-1-768x512.jpg" data-srcset="wp-content/uploads/2024/11/adventurer-scaled-1-768x512.jpg 1x,wp-content/uploads/2024/11/adventurer-scaled-1-768x512.jpg 2x" alt="" class="lazy-image"></div></div>          </div><div class="slick-slide" data-slick-index="1" aria-hidden="true" style="z-index: 998; opacity: 0;" tabindex="-1">
+            <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 0%;"><img data-src="wp-content/uploads/2024/11/camper-fishing-1440x960.jpg" data-srcset="wp-content/uploads/2024/11/camper-fishing-1440x960.jpg 1x,wp-content/uploads/2024/11/camper-fishing-1440x960.jpg 2x" alt="" class="lazy-image"></div></div>            <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 0%;"><img data-src="wp-content/uploads/2024/11/camper-fishing-768x512.jpg" data-srcset="wp-content/uploads/2024/11/camper-fishing-768x512.jpg 1x,wp-content/uploads/2024/11/camper-fishing-768x512.jpg 2x" alt="" class="lazy-image"></div></div>          </div><div class="slick-slide" data-slick-index="2" aria-hidden="true" style="z-index: 998; opacity: 0;" tabindex="-1">
+            <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 0%;"><img data-src="wp-content/uploads/2024/11/workaholic-scaled-1-1440x810.jpeg" data-srcset="wp-content/uploads/2024/11/workaholic-scaled-1-1440x810.jpeg 1x,wp-content/uploads/2024/11/workaholic-scaled-1-1440x810.jpeg 2x" alt="" class="lazy-image"></div></div>            <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 0%;"><img data-src="wp-content/uploads/2024/11/workaholic-scaled-1-768x432.jpeg" data-srcset="wp-content/uploads/2024/11/workaholic-scaled-1-768x432.jpeg 1x,wp-content/uploads/2024/11/workaholic-scaled-1-768x432.jpeg 2x" alt="" class="lazy-image"></div></div>          </div></div></div>
+                            
+                            
+              </div>
+    </section>
+              <section class="homepage__explore has-outer-borders">
+      <div class="wrapper">
+        <div class="homepage__explore__inner tabs">
+          <h2 class="label has-square has-square--beige">Explore</h2>
+          <ul class="tabs__trigger-wrapper tabs__trigger-wrapper--hover">
+                                        <li>
+                <a href="https://gorving.ca/category/rv-how-to/" class="h3 h3--smaller-mobile" data-tab="rv-how-to" data-tab-hover="">
+                  RV How-to <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+              </li>
+                                        <li>
+                <a href="https://gorving.ca/category/resources/budget-tips/" class="h3 h3--smaller-mobile" data-tab="budget-tips" data-tab-hover="">
+                  Budget Tips <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+              </li>
+                                        <li>
+                <a href="https://gorving.ca/category/stories/" class="h3 h3--smaller-mobile" data-tab="stories" data-tab-hover="">
+                  RV Stories <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+              </li>
+                                        <li>
+                <a href="https://gorving.ca/category/recipes/" class="h3 h3--smaller-mobile" data-tab="recipes" data-tab-hover="">
+                  Recipes <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+              </li>
+                                        <li>
+                <a href="https://gorving.ca/category/resources/expert-advice/" class="h3 h3--smaller-mobile" data-tab="expert-advice" data-tab-hover="">
+                  Expert Advice <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+              </li>
+                      </ul>
+          <div class="tabs__content-wrapper large-up">
+                                        <div id="rv-how-to" class="tab-content">
+                                                                                          <div class="media-wrapper media-wrapper--image"><div class="media-placeholder" style="padding-bottom: 100%;"><img data-src="wp-content/uploads/2026/08/Baltimore-Oriole-how-to-start-birdwatching-450x450.jpg" data-srcset="wp-content/uploads/2026/08/Baltimore-Oriole-how-to-start-birdwatching-450x450.jpg 1x,wp-content/uploads/2026/08/Baltimore-Oriole-how-to-start-birdwatching-450x450@2x.jpg 2x" alt="Baltimore Oriole" class="lazy-image"></div></div>                                                          <div class="media-wrapper media-wrapper--image"><div class="media-placeholder" style="padding-bottom: 100%;"><img data-src="wp-content/uploads/2026/05/RV-Rookie-Guide-Pat-Roach6-450x450.jpg" data-srcset="wp-content/uploads/2026/05/RV-Rookie-Guide-Pat-Roach6-450x450.jpg 1x,wp-content/uploads/2026/05/RV-Rookie-Guide-Pat-Roach6-450x450@2x.jpg 2x" alt="Pat Roach, Randy from Trailer Park Boys, behind the wheel on an RV road trip" class="lazy-image"></div></div>                                                </div>
+                                        <div id="budget-tips" class="tab-content">
+                                                                                          <div class="media-wrapper media-wrapper--image"><div class="media-placeholder" style="padding-bottom: 100%;"><img data-src="wp-content/uploads/2024/09/Chantal-Larcher-RV-Entrepreneur-450x450.png" data-srcset="wp-content/uploads/2024/09/Chantal-Larcher-RV-Entrepreneur-450x450.png 1x,wp-content/uploads/2024/09/Chantal-Larcher-RV-Entrepreneur-450x450@2x.png 2x" alt="Chantal Larcher owner of Tiny Stays Airbnb standing in front of an Airstream RV" class="lazy-image"></div></div>                                                          <div class="media-wrapper media-wrapper--image"><div class="media-placeholder" style="padding-bottom: 100%;"><img data-src="wp-content/uploads/2023/07/save-gas-motorhome-rv-450x450.jpg" data-srcset="wp-content/uploads/2023/07/save-gas-motorhome-rv-450x450.jpg 1x,wp-content/uploads/2023/07/save-gas-motorhome-rv-450x450.jpg 2x" alt="" class="lazy-image"></div></div>                                                </div>
+                                        <div id="stories" class="tab-content">
+                                                                                          <div class="media-wrapper media-wrapper--image"><div class="media-placeholder" style="padding-bottom: 100%;"><img data-src="wp-content/uploads/2024/09/Spartan-Race-Canada-RV-Road-Trip-Primary-Image-450x450.png" data-srcset="wp-content/uploads/2024/09/Spartan-Race-Canada-RV-Road-Trip-Primary-Image-450x450.png 1x,wp-content/uploads/2024/09/Spartan-Race-Canada-RV-Road-Trip-Primary-Image-450x450@2x.png 2x" alt="Spartan Race Ambassador Alexandre Contreras standing with his family in front of an RV" class="lazy-image"></div></div>                                                          <div class="media-wrapper media-wrapper--image"><div class="media-placeholder" style="padding-bottom: 100%;"><img data-src="wp-content/uploads/2024/09/Chantal-Larcher-RV-Entrepreneur-450x450.png" data-srcset="wp-content/uploads/2024/09/Chantal-Larcher-RV-Entrepreneur-450x450.png 1x,wp-content/uploads/2024/09/Chantal-Larcher-RV-Entrepreneur-450x450@2x.png 2x" alt="Chantal Larcher owner of Tiny Stays Airbnb standing in front of an Airstream RV" class="lazy-image"></div></div>                                                </div>
+                                        <div id="recipes" class="tab-content">
+                                                                                          <div class="media-wrapper media-wrapper--image"><div class="media-placeholder" style="padding-bottom: 100%;"><img data-src="wp-content/uploads/2026/04/AHP_8866-450x450.jpg" data-srcset="wp-content/uploads/2026/04/AHP_8866-450x450.jpg 1x,wp-content/uploads/2026/04/AHP_8866-450x450@2x.jpg 2x" alt="" class="lazy-image"></div></div>                                                          <div class="media-wrapper media-wrapper--image"><div class="media-placeholder" style="padding-bottom: 100%;"><img data-src="wp-content/uploads/2025/08/IMG_0272_jpg-1-e1756219024784-450x450.jpeg" data-srcset="wp-content/uploads/2025/08/IMG_0272_jpg-1-e1756219024784-450x450.jpeg 1x,wp-content/uploads/2025/08/IMG_0272_jpg-1-e1756219024784-450x450@2x.jpeg 2x" alt="Mini pancakes on a cooling rack with a pint of beer and maple syrup" class="lazy-image"></div></div>                                                </div>
+                                        <div id="expert-advice" class="tab-content">
+                                                                                          <div class="media-wrapper media-wrapper--image"><div class="media-placeholder" style="padding-bottom: 100%;"><img data-src="wp-content/uploads/2026/08/Baltimore-Oriole-how-to-start-birdwatching-450x450.jpg" data-srcset="wp-content/uploads/2026/08/Baltimore-Oriole-how-to-start-birdwatching-450x450.jpg 1x,wp-content/uploads/2026/08/Baltimore-Oriole-how-to-start-birdwatching-450x450@2x.jpg 2x" alt="Baltimore Oriole" class="lazy-image"></div></div>                                                          <div class="media-wrapper media-wrapper--image"><div class="media-placeholder" style="padding-bottom: 100%;"><img data-src="wp-content/uploads/2026/05/RV-Rookie-Guide-Pat-Roach6-450x450.jpg" data-srcset="wp-content/uploads/2026/05/RV-Rookie-Guide-Pat-Roach6-450x450.jpg 1x,wp-content/uploads/2026/05/RV-Rookie-Guide-Pat-Roach6-450x450@2x.jpg 2x" alt="Pat Roach, Randy from Trailer Park Boys, behind the wheel on an RV road trip" class="lazy-image"></div></div>                                                </div>
+                      </div>
+                                              <a href="https://gorving.ca/tips-lifestyle/" target="" class="button button--translucent large-down">
+    All Articles <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+  </a>
+                    </div>
+      </div>
+    </section>
+  
+      <section class="follow has-outer-borders">
+    <div class="wrapper">
+            <div class="marquee" data-duration="8500"><div class="js-marquee-wrapper"><div class="js-marquee">
+        <span class="h3 h3--smaller-mobile uppercase">
+                      <span aria-hidden="false">You Are Out There</span>
+                      <span aria-hidden="true">You Are Out There</span>
+                      <span aria-hidden="true">You Are Out There</span>
+                  </span>
+      </div><div class="js-marquee">
+        <span class="h3 h3--smaller-mobile uppercase">
+                      <span aria-hidden="false">You Are Out There</span>
+                      <span aria-hidden="true">You Are Out There</span>
+                      <span aria-hidden="true">You Are Out There</span>
+                  </span>
+      </div></div></div>
+      <div class="row">
+                                              <div class="column small-12 xlarge-6">
+            <div class="follow__instagram has-dark-background">
+                              																<a href="https://www.instagram.com/gorvingcanada" class="card card--feature card--simple" target="_blank">
+				<div class="card__media">
+					<div class="media-wrapper media-wrapper--image">
+						<div class="media-placeholder" style="padding-bottom: 107.5%;">
+							<img data-src="https://scontent-yyz1-1.cdninstagram.com/v/t51.71878-15/782876236_1389100703437812_7207815913538239244_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=100&amp;ccb=7-5&amp;_nc_sid=18de74&amp;efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&amp;_nc_ohc=ZKwTCVLD7jYQ7kNvwHZwkG-&amp;_nc_oc=Adqw3lCe-SAHPBg91Slen0TEK8xzwEA3f_gAht7c1pbCYr8tqUr_3ME_-wq91W6M1mQ&amp;_nc_zt=23&amp;_nc_ht=scontent-yyz1-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;_nc_gid=muoflnt6THEwMWfCuHAULg&amp;_nc_tpa=Q5bMBQKDHuO60S_x0KaCZOF1Nlmwi8SyeNqQi_NEH6wba3HZLT8qw_znmKEaN--T4IYrXDz_knWXwn_OrA&amp;oh=00_AQHh2DAFur3M_WACEiC27Wpl_UB_SN1vHY-KeysTW5L6iA&amp;oe=6A93B5BD" data-retina="https://scontent-yyz1-1.cdninstagram.com/v/t51.71878-15/782876236_1389100703437812_7207815913538239244_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=100&amp;ccb=7-5&amp;_nc_sid=18de74&amp;efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&amp;_nc_ohc=ZKwTCVLD7jYQ7kNvwHZwkG-&amp;_nc_oc=Adqw3lCe-SAHPBg91Slen0TEK8xzwEA3f_gAht7c1pbCYr8tqUr_3ME_-wq91W6M1mQ&amp;_nc_zt=23&amp;_nc_ht=scontent-yyz1-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;_nc_gid=muoflnt6THEwMWfCuHAULg&amp;_nc_tpa=Q5bMBQKDHuO60S_x0KaCZOF1Nlmwi8SyeNqQi_NEH6wba3HZLT8qw_znmKEaN--T4IYrXDz_knWXwn_OrA&amp;oh=00_AQHh2DAFur3M_WACEiC27Wpl_UB_SN1vHY-KeysTW5L6iA&amp;oe=6A93B5BD" alt="Breaking news: The friends trip actually made it out of the group chat... 🤯🚐⁠
+⁠
+TFW everyone got the same weekend off, nobody cancelled, and the squad actually delivered 👏 Just good friends, campfire nights, scenic drives, and an RV full of inside jokes.⁠
+⁠
+Tag the crew you'd hit the road with for the ultimate RV camping trip. 👇⁠
+⁠
+#GoRVingCanada #RVLife #CanadianRoadTrip⁠
+RV camping with friends, RV lifestyle Canada, RV adventure⁠" class="lazy-image">
+						</div>
+					</div>
+			  </div>
+									<div class="card__content">
+						<span class="card__title h5">
+							<span>
+								<svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
+								Follow Along							</span>
+							<span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+						</span>
+					</div>
+							</a>
+														<a href="https://www.instagram.com/p/DcTecTCIPY-/" class="card card--feature card--simple" target="_blank">
+				<div class="card__media">
+					<div class="media-wrapper media-wrapper--image">
+						<div class="media-placeholder" style="padding-bottom: 107.5%;">
+							<img data-src="https://scontent-yyz1-1.cdninstagram.com/v/t51.82787-15/777396775_18626093272005975_4936215870974407899_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=108&amp;ccb=7-5&amp;_nc_sid=18de74&amp;efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&amp;_nc_ohc=yBSEuI30YIsQ7kNvwED8SRn&amp;_nc_oc=AdpQNC_Diu2QayzWIQ7NhbQNbgAiECvxZyFDJeChMrdyjO-xEz4LaNqug50vb0jZNIs&amp;_nc_zt=23&amp;_nc_ht=scontent-yyz1-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;_nc_gid=muoflnt6THEwMWfCuHAULg&amp;_nc_tpa=Q5bMBQLgxQ3kiDEGbov8AiYEE6NGFU2npQQTglNGJOT67uZgHKvNYFRMM8PBreGzhlhIK6SKkLrGEtnfPg&amp;oh=00_AQHLockhMQXs3bLk1r92MRbhp0NoW56xl4LbZK7KaIHA9A&amp;oe=6A93A914" data-retina="https://scontent-yyz1-1.cdninstagram.com/v/t51.82787-15/777396775_18626093272005975_4936215870974407899_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=108&amp;ccb=7-5&amp;_nc_sid=18de74&amp;efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&amp;_nc_ohc=yBSEuI30YIsQ7kNvwED8SRn&amp;_nc_oc=AdpQNC_Diu2QayzWIQ7NhbQNbgAiECvxZyFDJeChMrdyjO-xEz4LaNqug50vb0jZNIs&amp;_nc_zt=23&amp;_nc_ht=scontent-yyz1-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;_nc_gid=muoflnt6THEwMWfCuHAULg&amp;_nc_tpa=Q5bMBQLgxQ3kiDEGbov8AiYEE6NGFU2npQQTglNGJOT67uZgHKvNYFRMM8PBreGzhlhIK6SKkLrGEtnfPg&amp;oh=00_AQHLockhMQXs3bLk1r92MRbhp0NoW56xl4LbZK7KaIHA9A&amp;oe=6A93A914" alt="Ferry over, fire up the RV, and discover one of Canada's most unforgettable road trips 🚐⁠
+⁠
+🌸 Wander through Butchart Gardens⁠
+🍫 Indulge in the famous Nanaimo Bar Trail⁠
+🐐 Visit the legendary Goats on the Roof in Coombs⁠
+⁠
+This 7-day Vancouver Island RV itinerary is packed with iconic stops, breathtaking scenery, and unforgettable experiences.⁠
+⁠
+📍Save this guide for your next RV vacation⁠
+⁠
+#GoRVingCanada #RoadTrip #RVTravel⁠
+RV camping British Columbia, Vancouver Island road trip, Where to RV camp in BC" class="lazy-image">
+						</div>
+					</div>
+			  </div>
+							</a>
+														<a href="https://www.instagram.com/p/DcQ84s2lnth/" class="card card--feature card--simple" target="_blank">
+				<div class="card__media">
+					<div class="media-wrapper media-wrapper--image">
+						<div class="media-placeholder" style="padding-bottom: 107.5%;">
+							<img data-src="https://scontent-yyz1-1.cdninstagram.com/v/t51.82787-15/779200951_18625782094005975_2276668322944763988_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=101&amp;ccb=7-5&amp;_nc_sid=18de74&amp;efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&amp;_nc_ohc=k0SFNThMBSwQ7kNvwEF9uDb&amp;_nc_oc=AdqZp_wmV6vjzPW2oRCTMj0fXSR3KSLnOM1kkwD6tYbds0yAXW4IAB-fDgw4AIfN_YI&amp;_nc_zt=23&amp;_nc_ht=scontent-yyz1-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;_nc_gid=muoflnt6THEwMWfCuHAULg&amp;_nc_tpa=Q5bMBQL4yj42NcAsD1wEnW3gvQK5ZThcWxm0s-VrMULpus8kJYBf4AgbztRR8qsgGHu85LgTvbkGmUVAeg&amp;oh=00_AQFJzVP9ADHLg-HFnlskOT2P5biXHEq5GCU-BQtsDKyoww&amp;oe=6A93829F" data-retina="https://scontent-yyz1-1.cdninstagram.com/v/t51.82787-15/779200951_18625782094005975_2276668322944763988_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=101&amp;ccb=7-5&amp;_nc_sid=18de74&amp;efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&amp;_nc_ohc=k0SFNThMBSwQ7kNvwEF9uDb&amp;_nc_oc=AdqZp_wmV6vjzPW2oRCTMj0fXSR3KSLnOM1kkwD6tYbds0yAXW4IAB-fDgw4AIfN_YI&amp;_nc_zt=23&amp;_nc_ht=scontent-yyz1-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;_nc_gid=muoflnt6THEwMWfCuHAULg&amp;_nc_tpa=Q5bMBQL4yj42NcAsD1wEnW3gvQK5ZThcWxm0s-VrMULpus8kJYBf4AgbztRR8qsgGHu85LgTvbkGmUVAeg&amp;oh=00_AQFJzVP9ADHLg-HFnlskOT2P5biXHEq5GCU-BQtsDKyoww&amp;oe=6A93829F" alt="Manitoba might just be Canada’s most underrated birding hotspot.
+
+Manitoba sits at the direct intersection of two major North American migration highways: the Mississippi Flyway and the Central Flyway. Because these two flyways narrow as birds head north toward breeding grounds, the province acts as a funnel for hundreds of species.
+
+It’s been on my bucket-list for years but I never got around to planning the road trip - until now. 
+
+The sheer concentration of migrating birds funnelling through the province was unbelievable but what makes Manitoba so special for a wildlife photographer is the sheer diversity of habitats sitting right next to each other. Within a short drive, you move from vast marshlands to boreal woods and sandy lake shorelines and shoot three completely different ecosystems in a single day.
+
+If you want to truly experience how beautiful this province is, my biggest recommendation is to do it on an RV road trip. Taking an RV made all the difference. It gave me a true mobile basecamp right in the middle of nature—waking up directly inside the parks, stepping outside into the morning quiet with a hot coffee, and soaking in the landscapes at my own pace with all my camera gear ready to go.
+
+Here are the 5 spots that made this trip unforgettable:
+
+📍 Oak Hammock Marsh 
+📍 Birds Hill Provincial Park 
+📍 Hecla Provincial Park 
+📍 St. Ambroise Provincial Park 
+📍 Riding Mountain National Park
+
+If you want to map out the route yourself, head to the link @gorvingcanada’s bio for my full 9-Day Manitoba Trip Guide with all my tips, shooting locations and the species I found there.
+
+📸 @wild.vandermeer | 🗺️ @travelmanitoba | 🚐 @gorvingcanada
+
+#GoRVingCanada #BirdMigration #RVTravel
+Bird watching in Manitoba, Birding road trip, Manitoba bird migration" class="lazy-image">
+						</div>
+					</div>
+			  </div>
+							</a>
+			                          </div>
+          </div>
+                                  <div class="column small-12 xlarge-6">
+            <div class="simple-card-wrapper simple-card-wrapper--large">
+                                                                                                      <div class="card card--feature card--simple card--small has-dark-background">
+    <div class="card__media">
+                              <div class="media-wrapper media-wrapper--image"><div class="media-placeholder" style="padding-bottom: 120%;"><img data-src="wp-content/uploads/2024/10/truck-camper-easy-to-drive-450x530.jpg" data-srcset="wp-content/uploads/2024/10/truck-camper-easy-to-drive-450x530.jpg 1x,wp-content/uploads/2024/10/truck-camper-easy-to-drive-450x530.jpg 2x" alt="" class="lazy-image"></div></div>          </div>
+    <div class="card__content">
+            <a href="javascript:void(0)" onclick="window.setLeaderboardFilter('food')" target="" class="card__title h5">
+                  <span class="hyphenate">Food & Drink</span>
+                <span class="button button--xxsmall button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+      </a>
+    </div>
+  </div>
+                                                                                                                    <div class="card card--feature card--simple card--small has-dark-background">
+    <div class="card__media">
+                              <div class="media-wrapper media-wrapper--image"><div class="media-placeholder" style="padding-bottom: 120%;"><img data-src="wp-content/uploads/2024/07/WildhoodCrewneckGreen-450x540.jpg" data-srcset="wp-content/uploads/2024/07/WildhoodCrewneckGreen-450x540.jpg 1x,wp-content/uploads/2024/07/WildhoodCrewneckGreen-450x540.jpg 2x" alt="" class="lazy-image"></div></div>          </div>
+    <div class="card__content">
+            <a href="https://store.gorving.ca/" target="" class="card__title h5">
+                  <span class="hyphenate">Get the Merch</span>
+                <span class="button button--xxsmall button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+      </a>
+    </div>
+  </div>
+                                        </div>
+          </div>
+              </div>
+    </div>
+  </section>
+  </div>
+</div>
+
         </main>
       </div>
-<!-- End of non-footer-site-wrap -->
+      <!-- End of non-footer-site-wrap -->
                     <footer class="footer has-dark-background">
           <div class="footer__top">
             <div class="wrapper">
@@ -1826,10 +2219,10 @@ a[href^="https://explore-site.com/"],
 </ul>                      </div>
                                           <div class="column small-6 large-4">
                         <strong class="label green">Find</strong>
-                        <ul id="menu-footer-menu-1" class="menu"><li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51"><a href="https://gorving.ca/explore-rvs/">RV Models</a></li>
-<li id="menu-item-50" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50"><a href="https://gorving.ca/trip-guides/">Trip Guides</a></li>
-<li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a href="https://gorving.ca/campgrounds/">Campgrounds</a></li>
-<li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48"><a href="https://gorving.ca/find-rv/">RV Dealers</a></li>
+                        <ul id="menu-footer-menu-1" class="menu"><li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51"><a href="#leaderboard">RV Models</a></li>
+<li id="menu-item-50" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50"><a href="javascript:void(0)" onclick="window.setLeaderboardFilter('wellness')">Trip Guides</a></li>
+<li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a href="javascript:void(0)" onclick="window.setLeaderboardFilter('services')">Campgrounds</a></li>
+<li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48"><a href="javascript:void(0)" onclick="window.setLeaderboardFilter('all')">RV Dealers</a></li>
 <li id="menu-item-47" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47"><a href="https://gorving.ca/rv-manufacturers/">RV Manufacturers</a></li>
 </ul>                      </div>
                                           <div class="column small-6 large-4">
@@ -1894,7 +2287,7 @@ var sbiajaxurl = "https://gorving.ca/wp-admin/admin-ajax.php";
 					<!-- End of Async HubSpot Analytics Code -->
 				<script type="text/javascript">var algolia = {"debug":false,"application_id":"59EXFV45E1","search_api_key":"90838168430e3305e3577c2a6d113ef5","powered_by_enabled":false,"insights_enabled":true,"search_hits_per_page":"10","query":"","indices":{"searchable_posts":{"name":"wp_searchable_posts","id":"searchable_posts","enabled":true,"replicas":[]},"posts_post":{"name":"wp_posts_post","id":"posts_post","enabled":true,"replicas":[]},"posts_page":{"name":"wp_posts_page","id":"posts_page","enabled":true,"replicas":[]},"posts_rv":{"name":"wp_posts_rv","id":"posts_rv","enabled":true,"replicas":[]},"posts_trip-guide":{"name":"wp_posts_trip-guide","id":"posts_trip-guide","enabled":true,"replicas":[]},"posts_dealer":{"name":"wp_posts_dealer","id":"posts_dealer","enabled":true,"replicas":[]},"posts_campground":{"name":"wp_posts_campground","id":"posts_campground","enabled":true,"replicas":[]},"posts_show":{"name":"wp_posts_show","id":"posts_show","enabled":true,"replicas":[]},"posts_manufacturer":{"name":"wp_posts_manufacturer","id":"posts_manufacturer","enabled":true,"replicas":[]}},"autocomplete":{"sources":[{"index_id":"searchable_posts","index_name":"wp_searchable_posts","label":"All posts","admin_name":"All posts","position":10,"max_suggestions":5,"debounce":0,"tmpl_suggestion":"autocomplete-post-suggestion","enabled":true},{"index_id":"posts_post","index_name":"wp_posts_post","label":"Posts","admin_name":"Posts","position":10,"max_suggestions":5,"debounce":0,"tmpl_suggestion":"autocomplete-post-suggestion","enabled":true},{"index_id":"posts_page","index_name":"wp_posts_page","label":"Pages","admin_name":"Pages","position":10,"max_suggestions":5,"debounce":0,"tmpl_suggestion":"autocomplete-post-suggestion","enabled":true},{"index_id":"posts_rv","index_name":"wp_posts_rv","label":"RV Models","admin_name":"RV Models","position":10,"max_suggestions":5,"debounce":0,"tmpl_suggestion":"autocomplete-post-suggestion","enabled":true},{"index_id":"posts_trip-guide","index_name":"wp_posts_trip-guide","label":"Trip Guides","admin_name":"Trip Guides","position":10,"max_suggestions":5,"debounce":0,"tmpl_suggestion":"autocomplete-post-suggestion","enabled":true},{"index_id":"posts_dealer","index_name":"wp_posts_dealer","label":"Dealers","admin_name":"Dealers","position":10,"max_suggestions":5,"debounce":0,"tmpl_suggestion":"autocomplete-post-suggestion","enabled":true},{"index_id":"posts_campground","index_name":"wp_posts_campground","label":"Campgrounds","admin_name":"Campgrounds","position":10,"max_suggestions":5,"debounce":0,"tmpl_suggestion":"autocomplete-post-suggestion","enabled":true},{"index_id":"posts_show","index_name":"wp_posts_show","label":"Shows","admin_name":"Shows","position":10,"max_suggestions":5,"debounce":0,"tmpl_suggestion":"autocomplete-post-suggestion","enabled":true},{"index_id":"posts_manufacturer","index_name":"wp_posts_manufacturer","label":"Manufacturers","admin_name":"Manufacturers","position":10,"max_suggestions":5,"debounce":0,"tmpl_suggestion":"autocomplete-post-suggestion","enabled":true}],"input_selector":"input[name='s']:not(.no-autocomplete):not(#adminbar-search)","input_selector_modern":"#autocomplete"}};</script><script defer="" id="bb_logon_script-js" src="wp-content/plugins/bread-butter/assets/breadbutter.min.js?ver=1785847967"></script>
 <script id="bb_config_script-js-extra">
-var bb_config_params = {"app_id":"69d6c2f8f05eab5d73849afd","api_path":"https://api.breadbutter.io","page_view_tracking":"1","show_login_focus":"","allow_sub_domain":"","ga_measurement_id":"","continue_with_position":{"top":"30","right":"30"},"hide_verified":"","remember_close":"1","remember_close_duration_hour":"24","user_profile_tools":{"enabled":"off","position":{"top":"30","right":"30"}},"cookie_consent":{"enabled":"","header_text":"","main_text":""},"has_continue_with":"0","continue_with_success_seconds":"","continue_with_success_header":"","continue_with_success_text":"","disable_continue_with_mobile":"","stack_order":"10000","app_name":"Go RVing Canada","is_home_url":"1","locale":{"POPUP":[],"CUSTOM_DATA":[]},"button_theme":"tiles","custom_events":"[]","custom_data":"[]","secure_forms":"[]","use_ui":"1","page_settings":{"_edit_lock":["1787186566:3"],"_edit_last":["3"],"_yoast_wpseo_estimated-reading-time-minutes":["1"],"_yoast_wpseo_wordproof_timestamp":[""],"hero_features":["a:4:{i:0;s:5:\"93583\";i:1;s:5:\"93354\";i:2;s:5:\"67982\";i:3;s:5:\"68161\";}"],"_hero_features":["field_6661b471d9097"],"hero":[""],"_hero":["field_6661b452d9096"],"hero_text_1":["Utahs"],"_hero_text_1":["field_6661b5fc1233c"],"hero_text_2":["Best"],"_hero_text_2":["field_6661b60c1233d"],"hero_text_3":["Businesses"],"_hero_text_3":["field_6661b62e1233e"],"hero_heading_0_text":["Utahs"],"_hero_heading_0_text":["field_6661cb7e714a1"],"hero_heading_1_text":["Best"],"_hero_heading_1_text":["field_6661cb7e714a1"],"hero_heading_2_text":["Businesses"],"_hero_heading_2_text":["field_6661cb7e714a1"],"hero_heading":["3"],"_hero_heading":["field_6661cb74714a0"],"_wp_page_template":["default"],"follow_marquee_text":["You Are Out There"],"_follow_marquee_text":["field_6661cb404388c"],"follow_features":["a:2:{i:0;s:4:\"1171\";i:1;s:4:\"1164\";}"],"_follow_features":["field_666084b4034e2"],"follow_instagram_handle":["gorvingcanada"],"_follow_instagram_handle":["field_66608813823a0"],"follow_instagram_link_text":["Follow Along"],"_follow_instagram_link_text":["field_666088dd823a1"],"follow_instagram":[""],"_follow_instagram":["field_666088088239f"],"follow":[""],"_follow":["field_66608483034e0"],"experience_levels_levels_0_type":["Beginners"],"_experience_levels_levels_0_type":["field_66a00a324b857"],"experience_levels_levels_0_features":["a:3:{i:0;s:4:\"1167\";i:1;s:4:\"1166\";i:2;s:4:\"1171\";}"],"_experience_levels_levels_0_features":["field_66a00a5e4b858"],"experience_levels_levels_0_description":["With an RV you can explore the world and find your wildhood. Take the comfort of your own home with you and follow your own adventures."],"_experience_levels_levels_0_description":["field_66a00a784b859"],"experience_levels_levels_0_cta":["a:3:{s:5:\"title\";s:11:\"Get Started\";s:3:\"url\";s:38:\"https://gorving.ca/rv-beginners-guide/\";s:6:\"target\";s:0:\"\";}"],"_experience_levels_levels_0_cta":["field_66a00a9a4b85a"],"experience_levels_levels_1_type":["Experts"],"_experience_levels_levels_1_type":["field_66a00a324b857"],"experience_levels_levels_1_features":["a:3:{i:0;s:4:\"1164\";i:1;s:4:\"1165\";i:2;s:5:\"44863\";}"],"_experience_levels_levels_1_features":["field_66a00a5e4b858"],"experience_levels_levels_1_description":["\u003Cp class=\"ai-optimize-6\"\u003EAlready into the lifestyle? Explore this section for tips, ideas and inspiration from RVing experts on all things RV related.\u003C/p\u003E"],"_experience_levels_levels_1_description":["field_66a00a784b859"],"experience_levels_levels_1_cta":["a:3:{s:5:\"title\";s:12:\"Get Inspired\";s:3:\"url\";s:34:\"https://gorving.ca/tips-lifestyle/\";s:6:\"target\";s:0:\"\";}"],"_experience_levels_levels_1_cta":["field_66a00a9a4b85a"],"experience_levels_levels":["2"],"_experience_levels_levels":["field_66a00a164b856"],"experience_levels":[""],"_experience_levels":["field_66a009e54b855"],"rvs_categories_0_category":["78"],"_rvs_categories_0_category":["field_66a00af4bf147"],"rvs_categories_1_category":["80"],"_rvs_categories_1_category":["field_66a00af4bf147"],"rvs_categories_2_category":["79"],"_rvs_categories_2_category":["field_66a00af4bf147"],"rvs_categories":["3"],"_rvs_categories":["field_66a00ad5bf146"],"rvs_cta_text_override":["Compare All RVs"],"_rv_models_cta_text_override":["field_66a00b38bf148"],"rv_models":[""],"_rv_models":["field_66a00ab5bf145"],"explore_categories_0_category":["6"],"_explore_categories_0_category":["field_66a00bd4e6404"],"explore_categories_1_category":["366"],"_explore_categories_1_category":["field_66a00bd4e6404"],"explore_categories_2_category":["353"],"_explore_categories_2_category":["field_66a00bd4e6404"],"explore_categories_3_category":["7"],"_explore_categories_3_category":["field_66a00bd4e6404"],"explore_categories_4_category":["360"],"_explore_categories_4_category":["field_66a00bd4e6404"],"explore_categories":["5"],"_explore_categories":["field_66a00b9ae6403"],"explore":[""],"_explore":["field_66a00b8fe6402"],"_yoast_wpseo_content_score":["90"],"rvs_cta":["a:3:{s:5:\"title\";s:15:\"Compare All RVs\";s:3:\"url\";s:38:\"https://gorving.ca/go-rving/rv-models/\";s:6:\"target\";s:0:\"\";}"],"_rv_models_cta":["field_66a00b38bf148"],"rv_models_types_0_type":["78"],"_rv_models_types_0_type":["field_66a00af4bf147"],"rv_models_types_1_type":["80"],"_rv_models_types_1_type":["field_66a00af4bf147"],"rv_models_types_2_type":["79"],"_rv_models_types_2_type":["field_66a00af4bf147"],"rv_models_types":["3"],"_rv_models_types":["field_66a00ad5bf146"],"rvs_types_0_type":["78"],"_rvs_types_0_type":["field_66a00af4bf147"],"rvs_types_1_type":["80"],"_rvs_types_1_type":["field_66a00af4bf147"],"rvs_types_2_type":["79"],"_rvs_types_2_type":["field_66a00af4bf147"],"rvs_types":["3"],"_rvs_types":["field_66a00ad5bf146"],"_rvs_cta":["field_66a00b38bf148"],"rvs":[""],"_rvs":["field_66a00ab5bf145"],"_wpml_word_count":["3"],"_wpml_media_duplicate":["0"],"_wpml_media_featured":["0"],"latest_featured_override":[""],"_latest_featured_override":["field_67a666f392eab"],"_yoast_wpseo_title":["RV dealers, Campgrounds and Trip Guides | %%sitename%%"],"_yoast_wpseo_metadesc":["Your destination for all things RV. We have you covered with RV camping info, trip guides, RV dealers and campgrounds across Canada."],"_yoast_indexnow_last_ping":["1787072939"],"_yoast_wpseo_focuskw":["RV Canada"],"_yoast_wpseo_linkdex":["64"],"_yoast_wpseo_focuskeywords":[""],"_yoast_wpseo_keywordsynonyms":[""],"_thumbnail_id":["40594"],"algolia_searchable_posts_records_count":["1"],"algolia_posts_page_records_count":["1"]},"wordpress_admin_ajax":"https://gorving.ca/wp-admin/admin-ajax.php"};
+var bb_config_params = {"app_id":"69d6c2f8f05eab5d73849afd","api_path":"https://api.breadbutter.io","page_view_tracking":"1","show_login_focus":"","allow_sub_domain":"","ga_measurement_id":"","continue_with_position":{"top":"30","right":"30"},"hide_verified":"","remember_close":"1","remember_close_duration_hour":"24","user_profile_tools":{"enabled":"off","position":{"top":"30","right":"30"}},"cookie_consent":{"enabled":"","header_text":"","main_text":""},"has_continue_with":"0","continue_with_success_seconds":"","continue_with_success_header":"","continue_with_success_text":"","disable_continue_with_mobile":"","stack_order":"10000","app_name":"Go RVing Canada","is_home_url":"1","locale":{"POPUP":[],"CUSTOM_DATA":[]},"button_theme":"tiles","custom_events":"[]","custom_data":"[]","secure_forms":"[]","use_ui":"1","page_settings":{"_edit_lock":["1787186566:3"],"_edit_last":["3"],"_yoast_wpseo_estimated-reading-time-minutes":["1"],"_yoast_wpseo_wordproof_timestamp":[""],"hero_features":["a:4:{i:0;s:5:\"93583\";i:1;s:5:\"93354\";i:2;s:5:\"67982\";i:3;s:5:\"68161\";}"],"_hero_features":["field_6661b471d9097"],"hero":[""],"_hero":["field_6661b452d9096"],"hero_text_1":["Utahs"],"_hero_text_1":["field_6661b5fc1233c"],"hero_text_2":["Best"],"_hero_text_2":["field_6661b60c1233d"],"hero_text_3":["Businesses"],"_hero_text_3":["field_6661b62e1233e"],"hero_heading_0_text":["Utahs"],"_hero_heading_0_text":["field_6661cb7e714a1"],"hero_heading_1_text":["Best"],"_hero_heading_1_text":["field_6661cb7e714a1"],"hero_heading_2_text":["Businesses"],"_hero_heading_2_text":["field_6661cb7e714a1"],"hero_heading":["3"],"_hero_heading":["field_6661cb74714a0"],"_wp_page_template":["default"],"follow_marquee_text":["You Are Out There"],"_follow_marquee_text":["field_6661cb404388c"],"follow_features":["a:2:{i:0;s:4:\"1171\";i:1;s:4:\"1164\";}"],"_follow_features":["field_666084b4034e2"],"follow_instagram_handle":["gorvingcanada"],"_follow_instagram_handle":["field_66608813823a0"],"follow_instagram_link_text":["Follow Along"],"_follow_instagram_link_text":["field_666088dd823a1"],"follow_instagram":[""],"_follow_instagram":["field_666088088239f"],"follow":[""],"_follow":["field_66608483034e0"],"experience_levels_levels_0_type":["Eat & Play"],"_experience_levels_levels_0_type":["field_66a00a324b857"],"experience_levels_levels_0_features":["a:3:{i:0;s:4:\"1167\";i:1;s:4:\"1166\";i:2;s:4:\"1171\";}"],"_experience_levels_levels_0_features":["field_66a00a5e4b858"],"experience_levels_levels_0_description":["Explore Utah's premier dining spots, cafes, breweries, and outdoor adventures."],"_experience_levels_levels_0_description":["field_66a00a784b859"],"experience_levels_levels_0_cta":["a:3:{s:5:\"title\";s:11:\"Explore Dining\";s:3:\"url\";s:38:\"https://gorving.ca/rv-beginners-guide/\";s:6:\"target\";s:0:\"\";}"],"_experience_levels_levels_0_cta":["field_66a00a9a4b85a"],"experience_levels_levels_1_type":["Shop & Stay"],"_experience_levels_levels_1_type":["field_66a00a324b857"],"experience_levels_levels_1_features":["a:3:{i:0;s:4:\"1164\";i:1;s:4:\"1165\";i:2;s:5:\"44863\";}"],"_experience_levels_levels_1_features":["field_66a00a5e4b858"],"experience_levels_levels_1_description":["\u003Cp class=\"ai-optimize-6\"\u003EFind trusted professional services, retail shops, and world-class health, spa, and beauty retreats.\u003C/p\u003E"],"_experience_levels_levels_1_description":["field_66a00a784b859"],"experience_levels_levels_1_cta":["a:3:{s:5:\"title\";s:12:\"List Business\";s:3:\"url\";s:34:\"https://gorving.ca/tips-lifestyle/\";s:6:\"target\";s:0:\"\";}"],"_experience_levels_levels_1_cta":["field_66a00a9a4b85a"],"experience_levels_levels":["2"],"_experience_levels_levels":["field_66a00a164b856"],"experience_levels":[""],"_experience_levels":["field_66a009e54b855"],"rvs_categories_0_category":["78"],"_rvs_categories_0_category":["field_66a00af4bf147"],"rvs_categories_1_category":["80"],"_rvs_categories_1_category":["field_66a00af4bf147"],"rvs_categories_2_category":["79"],"_rvs_categories_2_category":["field_66a00af4bf147"],"rvs_categories":["3"],"_rvs_categories":["field_66a00ad5bf146"],"rvs_cta_text_override":["View Leaderboard"],"_rv_models_cta_text_override":["field_66a00b38bf148"],"rv_models":[""],"_rv_models":["field_66a00ab5bf145"],"explore_categories_0_category":["6"],"_explore_categories_0_category":["field_66a00bd4e6404"],"explore_categories_1_category":["366"],"_explore_categories_1_category":["field_66a00bd4e6404"],"explore_categories_2_category":["353"],"_explore_categories_2_category":["field_66a00bd4e6404"],"explore_categories_3_category":["7"],"_explore_categories_3_category":["field_66a00bd4e6404"],"explore_categories_4_category":["360"],"_explore_categories_4_category":["field_66a00bd4e6404"],"explore_categories":["5"],"_explore_categories":["field_66a00b9ae6403"],"explore":[""],"_explore":["field_66a00b8fe6402"],"_yoast_wpseo_content_score":["90"],"rvs_cta":["a:3:{s:5:\"title\";s:15:\"View Leaderboard\";s:3:\"url\";s:38:\"https://gorving.ca/go-rving/rv-models/\";s:6:\"target\";s:0:\"\";}"],"_rv_models_cta":["field_66a00b38bf148"],"rv_models_types_0_type":["78"],"_rv_models_types_0_type":["field_66a00af4bf147"],"rv_models_types_1_type":["80"],"_rv_models_types_1_type":["field_66a00af4bf147"],"rv_models_types_2_type":["79"],"_rv_models_types_2_type":["field_66a00af4bf147"],"rv_models_types":["3"],"_rv_models_types":["field_66a00ad5bf146"],"rvs_types_0_type":["78"],"_rvs_types_0_type":["field_66a00af4bf147"],"rvs_types_1_type":["80"],"_rvs_types_1_type":["field_66a00af4bf147"],"rvs_types_2_type":["79"],"_rvs_types_2_type":["field_66a00af4bf147"],"rvs_types":["3"],"_rvs_types":["field_66a00ad5bf146"],"_rvs_cta":["field_66a00b38bf148"],"rvs":[""],"_rvs":["field_66a00ab5bf145"],"_wpml_word_count":["3"],"_wpml_media_duplicate":["0"],"_wpml_media_featured":["0"],"latest_featured_override":[""],"_latest_featured_override":["field_67a666f392eab"],"_yoast_wpseo_title":["RV dealers, Campgrounds and Trip Guides | %%sitename%%"],"_yoast_wpseo_metadesc":["Your destination for all things RV. We have you covered with RV camping info, trip guides, RV dealers and campgrounds across Canada."],"_yoast_indexnow_last_ping":["1787072939"],"_yoast_wpseo_focuskw":["RV Canada"],"_yoast_wpseo_linkdex":["64"],"_yoast_wpseo_focuskeywords":[""],"_yoast_wpseo_keywordsynonyms":[""],"_thumbnail_id":["40594"],"algolia_searchable_posts_records_count":["1"],"algolia_posts_page_records_count":["1"]},"wordpress_admin_ajax":"https://gorving.ca/wp-admin/admin-ajax.php"};
 //# sourceURL=bb_config_script-js-extra
 </script>
 <script defer="" id="bb_config_script-js" src="wp-content/plugins/bread-butter/assets/breadbutter.config.js?ver=1785847967"></script>
