@@ -1068,7 +1068,6 @@ a[href^="https://explore-site.com/"],
   margin: 0;
   position: relative;
   overflow: visible !important;
-  padding-left: max(20px, calc((100vw - 1200px) / 2));
   padding-right: max(20px, calc((100vw - 1200px) / 2 + 120px));
 }
 
@@ -1082,8 +1081,9 @@ a[href^="https://explore-site.com/"],
   border-radius: 8px;
   overflow: hidden;
 }
+/* Push the first card to align exactly with the Zurb Foundation content wrapper */
 .overlap-card:first-child {
-  margin-left: 0 !important;
+  margin-left: max(20px, calc((100vw - 1200px) / 2)) !important;
 }
 .overlap-card:hover {
   transform: scale(1.08) rotate(0deg) translateY(-20px) !important;
