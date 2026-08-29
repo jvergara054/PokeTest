@@ -811,14 +811,42 @@ a[href^="https://explore-site.com/"],
   transform: none !important;
   display: block !important;
 }
-.homepage__experience-levels {
-  position: static !important;
-  width: 100% !important;
-  height: auto !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: none !important;
-  display: block !important;
+
+.categories-experience-levels {
+  background-color: #f6f4ed !important;
+  padding: 80px 0 !important;
+  border-bottom: 1px solid #dfe5df;
+}
+
+.horizontal-scroll-row {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  gap: 20px;
+  padding: 20px 0 !important;
+  margin: 0 !important;
+  scrollbar-width: thin;
+  scrollbar-color: #fc6b3e rgba(18, 61, 50, 0.05);
+}
+
+.horizontal-scroll-row::-webkit-scrollbar {
+  height: 6px;
+}
+.horizontal-scroll-row::-webkit-scrollbar-track {
+  background: rgba(18, 61, 50, 0.05);
+  border-radius: 10px;
+}
+.horizontal-scroll-row::-webkit-scrollbar-thumb {
+  background: #fc6b3e;
+  border-radius: 10px;
+}
+
+.horizontal-scroll-row .column {
+  flex: 0 0 280px !important;
+  width: 280px !important;
+  max-width: 280px !important;
+  padding: 0 !important;
 }
 
 #leaderboard-list {
@@ -1267,20 +1295,20 @@ a[href^="https://explore-site.com/"],
       </div>
     </section>
     <div id="scroll">
-            <div class="pin-spacer" style="z-index: auto; display: block;"><section class="homepage__experience-levels has-outer-borders" style="background-color: rgba(0, 0, 0, 0);">
+            <div class="categories-container-wrap"><section class="categories-experience-levels has-outer-borders">
       <div class="wrapper">
-        <div class="side-slider side-slider--auto">
-          <div class="row">
+        <div class="categories-slider-wrapper">
+          <div class="row" style="display: flex; gap: 40px; flex-wrap: wrap;">
             <!-- Left Column: Food & Outdoors -->
-            <div class="column small-12 xlarge-9">
+            <div class="column small-12 xlarge-6" style="flex: 1; min-width: 300px; margin-bottom: 40px;">
               <h2 class="label has-square has-square--orange">Discover Local</h2>
-              <h3 class="h2 uppercase">Food & Outdoors</h3>
-              <div class="side-slider">
-                <svg class="icon icon--full-squiggle"><use xlink:href="#full-squiggle"></use></svg>
-                <div class="row">
+              <h3 class="h2 uppercase" style="color: #123d32;">Food & Outdoors</h3>
+              <div class="categories-track" style="position: relative;">
+                <svg class="icon icon--full-squiggle" style="position: absolute; top: 50%; left: 0; width: 100%; transform: translateY(-50%); pointer-events: none; z-index: 1;"><use xlink:href="#full-squiggle"></use></svg>
+                <div class="horizontal-scroll-row">
                   <!-- Card 1: Food & Drink -->
-                  <div class="column small-4">
-                    <div class="card card--feature card--simple card--small has-dark-background">
+                  <div class="column">
+                    <div class="card card--feature card--simple card--small has-dark-background" style="position: relative; z-index: 2;">
                       <div class="card__media">
                         <div class="media-wrapper media-wrapper--image">
                           <div class="media-placeholder" style="padding-bottom: 120%;">
@@ -1297,8 +1325,8 @@ a[href^="https://explore-site.com/"],
                     </div>
                   </div>
                   <!-- Card 2: Outdoors -->
-                  <div class="column small-4">
-                    <div class="card card--feature card--simple card--small has-dark-background">
+                  <div class="column">
+                    <div class="card card--feature card--simple card--small has-dark-background" style="position: relative; z-index: 2;">
                       <div class="card__media">
                         <div class="media-wrapper media-wrapper--image">
                           <div class="media-placeholder" style="padding-bottom: 120%;">
@@ -1315,8 +1343,8 @@ a[href^="https://explore-site.com/"],
                     </div>
                   </div>
                   <!-- Card 3: All Categories -->
-                  <div class="column small-4">
-                    <div class="card card--feature card--simple card--small has-dark-background">
+                  <div class="column">
+                    <div class="card card--feature card--simple card--small has-dark-background" style="position: relative; z-index: 2;">
                       <div class="card__media">
                         <div class="media-wrapper media-wrapper--image">
                           <div class="media-placeholder" style="padding-bottom: 120%;">
@@ -1334,23 +1362,23 @@ a[href^="https://explore-site.com/"],
                   </div>
                 </div>
               </div>
-              <div class="wysiwyg">
-                <p>Explore Utah's premier dining spots and outdoor adventures. Click any category to filter the leaderboard list directly below.</p>
-                <a href="#leaderboard" onclick="window.setLeaderboardFilter('all')" class="arrow-link">
+              <div class="wysiwyg" style="margin-top: 20px;">
+                <p style="color: #123d32;">Explore Utah's premier dining spots and outdoor adventures. Click any category to filter the leaderboard list directly below.</p>
+                <a href="#leaderboard" onclick="window.setLeaderboardFilter('all')" class="arrow-link" style="color: #fc6b3e; font-weight: bold;">
                   Explore All <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
                 </a>
               </div>
             </div>
             <!-- Right Column: Services & Wellness -->
-            <div class="column small-12 xlarge-9">
+            <div class="column small-12 xlarge-6" style="flex: 1; min-width: 300px; margin-bottom: 40px;">
               <h2 class="label has-square has-square--orange">Discover Local</h2>
-              <h3 class="h2 uppercase">Services & Wellness</h3>
-              <div class="side-slider">
-                <svg class="icon icon--full-squiggle"><use xlink:href="#full-squiggle"></use></svg>
-                <div class="row">
+              <h3 class="h2 uppercase" style="color: #123d32;">Services & Wellness</h3>
+              <div class="categories-track" style="position: relative;">
+                <svg class="icon icon--full-squiggle" style="position: absolute; top: 50%; left: 0; width: 100%; transform: translateY(-50%); pointer-events: none; z-index: 1;"><use xlink:href="#full-squiggle"></use></svg>
+                <div class="horizontal-scroll-row">
                   <!-- Card 1: Wellness -->
-                  <div class="column small-4">
-                    <div class="card card--feature card--simple card--small has-dark-background">
+                  <div class="column">
+                    <div class="card card--feature card--simple card--small has-dark-background" style="position: relative; z-index: 2;">
                       <div class="card__media">
                         <div class="media-wrapper media-wrapper--image">
                           <div class="media-placeholder" style="padding-bottom: 120%;">
@@ -1367,8 +1395,8 @@ a[href^="https://explore-site.com/"],
                     </div>
                   </div>
                   <!-- Card 2: Services -->
-                  <div class="column small-4">
-                    <div class="card card--feature card--simple card--small has-dark-background">
+                  <div class="column">
+                    <div class="card card--feature card--simple card--small has-dark-background" style="position: relative; z-index: 2;">
                       <div class="card__media">
                         <div class="media-wrapper media-wrapper--image">
                           <div class="media-placeholder" style="padding-bottom: 120%;">
@@ -1385,8 +1413,8 @@ a[href^="https://explore-site.com/"],
                     </div>
                   </div>
                   <!-- Card 3: List Business -->
-                  <div class="column small-4">
-                    <div class="card card--feature card--simple card--small has-dark-background">
+                  <div class="column">
+                    <div class="card card--feature card--simple card--small has-dark-background" style="position: relative; z-index: 2;">
                       <div class="card__media">
                         <div class="media-wrapper media-wrapper--image">
                           <div class="media-placeholder" style="padding-bottom: 120%;">
@@ -1404,9 +1432,9 @@ a[href^="https://explore-site.com/"],
                   </div>
                 </div>
               </div>
-              <div class="wysiwyg">
-                <p>Find trusted professional services and world-class health, spa, and beauty retreats throughout the state of Utah.</p>
-                <a href="javascript:void(0)" onclick="window.openBiddingModal()" class="arrow-link">
+              <div class="wysiwyg" style="margin-top: 20px;">
+                <p style="color: #123d32;">Find trusted professional services and world-class health, spa, and beauty retreats throughout the state of Utah.</p>
+                <a href="javascript:void(0)" onclick="window.openBiddingModal()" class="arrow-link" style="color: #fc6b3e; font-weight: bold;">
                   List Business <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
                 </a>
               </div>
