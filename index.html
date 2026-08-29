@@ -1081,7 +1081,7 @@ a[href^="https://explore-site.com/"],
 .overlap-card {
   flex: 0 0 300px;
   width: 300px;
-  margin-left: -30px; /* Reduced negative margin to space cards out further */
+  margin-left: -20px; /* Spaced out further (overlap reduced from -30px to -20px) */
   position: relative;
   transition: transform 0.3s ease, z-index 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
@@ -2004,8 +2004,8 @@ a[href^="https://explore-site.com/"],
       <!-- Static Row with native overflow-x horizontal swipe (No side-slider--auto class to prevent duplicate scroll-jacking) -->
       <div style="overflow: visible; width: 100%;">
         <div class="row overlap-card-container">
-          <!-- Card 1: Follow Us (Instagram CTA from screenshot, layered at z-index 12 so it's on top of Card 2!) -->
-          <a href="https://www.instagram.com/gorvingcanada" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-1.5deg) translateY(5px); z-index: 12;">
+          <!-- Card 1: Follow Us (Instagram CTA from screenshot, layered at z-index 1) -->
+          <a href="https://www.instagram.com/gorvingcanada" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-1.5deg) translateY(5px); z-index: 1;">
             <div class="card__media">
               <div class="media-wrapper media-wrapper--image">
                 <div class="media-placeholder" style="padding-bottom: 120%;">
@@ -2024,8 +2024,8 @@ a[href^="https://explore-site.com/"],
             </div>
           </a>
 
-          <!-- Card 2: Valter's Osteria (Dine) -->
-          <a href="https://valtersosteria.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(2deg) translateY(-8px); z-index: 11;">
+          <!-- Card 2: Valter's Osteria (Dine, z-index 2 overlaps Card 1) -->
+          <a href="https://valtersosteria.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(2deg) translateY(-8px); z-index: 2;">
             <div class="card__media">
               <div class="media-wrapper media-wrapper--image">
                 <div class="media-placeholder" style="padding-bottom: 120%;">
@@ -2044,8 +2044,8 @@ a[href^="https://explore-site.com/"],
             </div>
           </a>
 
-          <!-- Card 3: Utah Mountain Adventures (Outdoors) -->
-          <a href="https://utahmountainadventures.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-3deg) translateY(12px); z-index: 10;">
+          <!-- Card 3: Utah Mountain Adventures (Outdoors, z-index 3 overlaps Card 2) -->
+          <a href="https://utahmountainadventures.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-3deg) translateY(12px); z-index: 3;">
             <div class="card__media">
               <div class="media-wrapper media-wrapper--image">
                 <div class="media-placeholder" style="padding-bottom: 120%;">
@@ -2064,8 +2064,8 @@ a[href^="https://explore-site.com/"],
             </div>
           </a>
 
-          <!-- Card 4: The Cliff Spa (Wellness) -->
-          <a href="https://snowbird.com/cliff-spa" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(1deg) translateY(-4px); z-index: 9;">
+          <!-- Card 4: The Cliff Spa (Wellness, z-index 4 overlaps Card 3) -->
+          <a href="https://snowbird.com/cliff-spa" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(1deg) translateY(-4px); z-index: 4;">
             <div class="card__media">
               <div class="media-wrapper media-wrapper--image">
                 <div class="media-placeholder" style="padding-bottom: 120%;">
@@ -2084,8 +2084,8 @@ a[href^="https://explore-site.com/"],
             </div>
           </a>
 
-          <!-- Card 5: Kuhl Outdoors (Shop) -->
-          <a href="https://kuhl.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-2.5deg) translateY(8px); z-index: 8;">
+          <!-- Card 5: Kuhl Outdoors (Shop, z-index 5) -->
+          <a href="https://kuhl.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-2.5deg) translateY(8px); z-index: 5;">
             <div class="card__media">
               <div class="media-wrapper media-wrapper--image">
                 <div class="media-placeholder" style="padding-bottom: 120%;">
@@ -2104,8 +2104,8 @@ a[href^="https://explore-site.com/"],
             </div>
           </a>
 
-          <!-- Card 6: Log Haven (Food) -->
-          <a href="https://log-haven.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(3deg) translateY(-10px); z-index: 7;">
+          <!-- Card 6: Log Haven (Food, z-index 6) -->
+          <a href="https://log-haven.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(3deg) translateY(-10px); z-index: 6;">
             <div class="card__media">
               <div class="media-wrapper media-wrapper--image">
                 <div class="media-placeholder" style="padding-bottom: 120%;">
@@ -2124,8 +2124,8 @@ a[href^="https://explore-site.com/"],
             </div>
           </a>
 
-          <!-- Card 7: Snowbird Adventure (Outdoors) -->
-          <a href="https://snowbird.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-1deg) translateY(3px); z-index: 6;">
+          <!-- Card 7: Snowbird Adventure (Outdoors, z-index 7) -->
+          <a href="https://snowbird.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-1deg) translateY(3px); z-index: 7;">
             <div class="card__media">
               <div class="media-wrapper media-wrapper--image">
                 <div class="media-placeholder" style="padding-bottom: 120%;">
@@ -2144,8 +2144,8 @@ a[href^="https://explore-site.com/"],
             </div>
           </a>
 
-          <!-- Card 8: Kapi Massage (Wellness) -->
-          <a href="https://snowbird.com/cliff-spa" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(2.5deg) translateY(-6px); z-index: 5;">
+          <!-- Card 8: Kapi Massage (Wellness, z-index 8) -->
+          <a href="https://snowbird.com/cliff-spa" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(2.5deg) translateY(-6px); z-index: 8;">
             <div class="card__media">
               <div class="media-wrapper media-wrapper--image">
                 <div class="media-placeholder" style="padding-bottom: 120%;">
@@ -2164,8 +2164,8 @@ a[href^="https://explore-site.com/"],
             </div>
           </a>
 
-          <!-- Card 9: Ruth's Chris (Food) -->
-          <a href="https://valtersosteria.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-2.5deg) translateY(10px); z-index: 4;">
+          <!-- Card 9: Ruth's Chris (Food, z-index 9) -->
+          <a href="https://valtersosteria.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-2.5deg) translateY(10px); z-index: 9;">
             <div class="card__media">
               <div class="media-wrapper media-wrapper--image">
                 <div class="media-placeholder" style="padding-bottom: 120%;">
@@ -2184,8 +2184,8 @@ a[href^="https://explore-site.com/"],
             </div>
           </a>
 
-          <!-- Card 10: Wellness Cabin (Wellness) -->
-          <a href="https://log-haven.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(1.5deg) translateY(-5px); z-index: 3;">
+          <!-- Card 10: Wellness Cabin (Wellness, z-index 10) -->
+          <a href="https://log-haven.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(1.5deg) translateY(-5px); z-index: 10;">
             <div class="card__media">
               <div class="media-wrapper media-wrapper--image">
                 <div class="media-placeholder" style="padding-bottom: 120%;">
@@ -2204,8 +2204,8 @@ a[href^="https://explore-site.com/"],
             </div>
           </a>
 
-          <!-- Card 11: Wasatch Climbing (Outdoors) -->
-          <a href="https://utahmountainadventures.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-3deg) translateY(12px); z-index: 2;">
+          <!-- Card 11: Wasatch Climbing (Outdoors, z-index 11) -->
+          <a href="https://utahmountainadventures.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-3deg) translateY(12px); z-index: 11;">
             <div class="card__media">
               <div class="media-wrapper media-wrapper--image">
                 <div class="media-placeholder" style="padding-bottom: 120%;">
@@ -2224,8 +2224,8 @@ a[href^="https://explore-site.com/"],
             </div>
           </a>
 
-          <!-- Card 12: Millcreek Trails (Outdoors) -->
-          <a href="https://snowbird.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(2deg) translateY(-8px); z-index: 1;">
+          <!-- Card 12: Millcreek Trails (Outdoors, z-index 12) -->
+          <a href="https://snowbird.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(2deg) translateY(-8px); z-index: 12;">
             <div class="card__media">
               <div class="media-wrapper media-wrapper--image">
                 <div class="media-placeholder" style="padding-bottom: 120%;">
