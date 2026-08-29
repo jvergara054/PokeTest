@@ -1067,11 +1067,13 @@ a[href^="https://explore-site.com/"],
   padding: 60px 0;
   margin: 0;
   position: relative;
+  padding-left: max(20px, calc((100vw - 1200px) / 2));
+  padding-right: max(20px, calc((100vw - 1200px) / 2 + 120px));
 }
 .overlap-card {
-  flex: 0 0 280px;
-  width: 280px;
-  margin-left: -110px; /* Overlap width */
+  flex: 0 0 300px;
+  width: 300px;
+  margin-left: -60px; /* Reduced overlap for better spacing */
   position: relative;
   transition: transform 0.3s ease, z-index 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
@@ -1989,251 +1991,251 @@ a[href^="https://explore-site.com/"],
               </p>
             </div>
           </div>
+      </div>
 
-          <!-- Side Slider with 12 Overlapping Cards -->
-          <div class="side-slider side-slider--auto" style="overflow: visible;">
-            <div class="row overlap-card-container">
-              <!-- Card 1 -->
-              <a href="https://valtersosteria.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-1.5deg) translateY(5px); z-index: 1;">
-                <div class="card__media">
-                  <div class="media-wrapper media-wrapper--image">
-                    <div class="media-placeholder" style="padding-bottom: 120%;">
-                      <img data-src="wp-content/uploads/2026/08/Baltimore-Oriole-how-to-start-birdwatching-1440x960.jpg" class="lazy-image">
-                    </div>
-                  </div>
+      <!-- Side Slider with 12 Overlapping Cards (outside the wrapper to allow viewport overflow and slide pinning) -->
+      <div class="side-slider side-slider--auto" style="overflow: visible;">
+        <div class="row overlap-card-container">
+          <!-- Card 1 -->
+          <a href="https://valtersosteria.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-1.5deg) translateY(5px); z-index: 1;">
+            <div class="card__media">
+              <div class="media-wrapper media-wrapper--image">
+                <div class="media-placeholder" style="padding-bottom: 120%;">
+                  <img data-src="wp-content/uploads/2026/08/Baltimore-Oriole-how-to-start-birdwatching-1440x960.jpg" class="lazy-image">
                 </div>
-                <div class="card__content">
-                  <span class="card__title h5">
-                    <span>
-                      <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
-                      Valter's Osteria
-                    </span>
-                    <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
-                  </span>
-                </div>
-              </a>
-
-              <!-- Card 2 -->
-              <a href="https://utahmountainadventures.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(2deg) translateY(-8px); z-index: 2;">
-                <div class="card__media">
-                  <div class="media-wrapper media-wrapper--image">
-                    <div class="media-placeholder" style="padding-bottom: 120%;">
-                      <img data-src="wp-content/uploads/2026/05/GRVC-LTT_foodie.jpg" class="lazy-image">
-                    </div>
-                  </div>
-                </div>
-                <div class="card__content">
-                  <span class="card__title h5">
-                    <span>
-                      <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
-                      Utah Mountain Adv.
-                    </span>
-                    <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
-                  </span>
-                </div>
-              </a>
-
-              <!-- Card 3 -->
-              <a href="https://snowbird.com/cliff-spa" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-3deg) translateY(12px); z-index: 3;">
-                <div class="card__media">
-                  <div class="media-wrapper media-wrapper--image">
-                    <div class="media-placeholder" style="padding-bottom: 120%;">
-                      <img data-src="wp-content/uploads/2025/08/Go-Rving-Toronto-RV-Show-2025-65-1440x960.jpg" class="lazy-image">
-                    </div>
-                  </div>
-                </div>
-                <div class="card__content">
-                  <span class="card__title h5">
-                    <span>
-                      <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
-                      The Cliff Spa
-                    </span>
-                    <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
-                  </span>
-                </div>
-              </a>
-
-              <!-- Card 4 -->
-              <a href="https://kuhl.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(1deg) translateY(-4px); z-index: 4;">
-                <div class="card__media">
-                  <div class="media-wrapper media-wrapper--image">
-                    <div class="media-placeholder" style="padding-bottom: 120%;">
-                      <img data-src="wp-content/uploads/2024/07/WildhoodCrewneckGreen-1440x725.jpg" class="lazy-image">
-                    </div>
-                  </div>
-                </div>
-                <div class="card__content">
-                  <span class="card__title h5">
-                    <span>
-                      <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
-                      Kuhl Outdoors
-                    </span>
-                    <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
-                  </span>
-                </div>
-              </a>
-
-              <!-- Card 5 -->
-              <a href="https://log-haven.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-2.5deg) translateY(8px); z-index: 5;">
-                <div class="card__media">
-                  <div class="media-wrapper media-wrapper--image">
-                    <div class="media-placeholder" style="padding-bottom: 120%;">
-                      <img data-src="wp-content/uploads/2024/07/campers-with-trailer-campground-450x540.jpg" class="lazy-image">
-                    </div>
-                  </div>
-                </div>
-                <div class="card__content">
-                  <span class="card__title h5">
-                    <span>
-                      <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
-                      Log Haven Rest.
-                    </span>
-                    <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
-                  </span>
-                </div>
-              </a>
-
-              <!-- Card 6 -->
-              <a href="https://snowbird.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(3deg) translateY(-10px); z-index: 6;">
-                <div class="card__media">
-                  <div class="media-wrapper media-wrapper--image">
-                    <div class="media-placeholder" style="padding-bottom: 120%;">
-                      <img data-src="wp-content/uploads/2024/10/truck-camper-easy-to-drive-450x530.jpg" class="lazy-image">
-                    </div>
-                  </div>
-                </div>
-                <div class="card__content">
-                  <span class="card__title h5">
-                    <span>
-                      <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
-                      Snowbird Adventure
-                    </span>
-                    <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
-                  </span>
-                </div>
-              </a>
-
-              <!-- Card 7 -->
-              <a href="https://snowbird.com/cliff-spa" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-1deg) translateY(3px); z-index: 7;">
-                <div class="card__media">
-                  <div class="media-wrapper media-wrapper--image">
-                    <div class="media-placeholder" style="padding-bottom: 120%;">
-                      <img data-src="wp-content/uploads/2025/08/Go-Rving-Toronto-RV-Show-2025-65-1440x960.jpg" class="lazy-image">
-                    </div>
-                  </div>
-                </div>
-                <div class="card__content">
-                  <span class="card__title h5">
-                    <span>
-                      <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
-                      Kapi Massage
-                    </span>
-                    <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
-                  </span>
-                </div>
-              </a>
-
-              <!-- Card 8 -->
-              <a href="https://valtersosteria.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(2.5deg) translateY(-6px); z-index: 8;">
-                <div class="card__media">
-                  <div class="media-wrapper media-wrapper--image">
-                    <div class="media-placeholder" style="padding-bottom: 120%;">
-                      <img data-src="wp-content/uploads/2026/05/GRVC-LTT_foodie.jpg" class="lazy-image">
-                    </div>
-                  </div>
-                </div>
-                <div class="card__content">
-                  <span class="card__title h5">
-                    <span>
-                      <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
-                      Ruth's Chris
-                    </span>
-                    <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
-                  </span>
-                </div>
-              </a>
-
-              <!-- Card 9 -->
-              <a href="https://log-haven.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-2.5deg) translateY(10px); z-index: 9;">
-                <div class="card__media">
-                  <div class="media-wrapper media-wrapper--image">
-                    <div class="media-placeholder" style="padding-bottom: 120%;">
-                      <img data-src="wp-content/uploads/2024/07/campers-with-trailer-campground-450x540.jpg" class="lazy-image">
-                    </div>
-                  </div>
-                </div>
-                <div class="card__content">
-                  <span class="card__title h5">
-                    <span>
-                      <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
-                      Wellness Cabin
-                    </span>
-                    <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
-                  </span>
-                </div>
-              </a>
-
-              <!-- Card 10 -->
-              <a href="https://utahmountainadventures.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(1.5deg) translateY(-5px); z-index: 10;">
-                <div class="card__media">
-                  <div class="media-wrapper media-wrapper--image">
-                    <div class="media-placeholder" style="padding-bottom: 120%;">
-                      <img data-src="wp-content/uploads/2026/08/Baltimore-Oriole-how-to-start-birdwatching-1440x960.jpg" class="lazy-image">
-                    </div>
-                  </div>
-                </div>
-                <div class="card__content">
-                  <span class="card__title h5">
-                    <span>
-                      <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
-                      Wasatch Climbing
-                    </span>
-                    <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
-                  </span>
-                </div>
-              </a>
-
-              <!-- Card 11 -->
-              <a href="https://snowbird.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-3deg) translateY(12px); z-index: 11;">
-                <div class="card__media">
-                  <div class="media-wrapper media-wrapper--image">
-                    <div class="media-placeholder" style="padding-bottom: 120%;">
-                      <img data-src="wp-content/uploads/2024/10/truck-camper-easy-to-drive-450x530.jpg" class="lazy-image">
-                    </div>
-                  </div>
-                </div>
-                <div class="card__content">
-                  <span class="card__title h5">
-                    <span>
-                      <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
-                      Millcreek Trails
-                    </span>
-                    <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
-                  </span>
-                </div>
-              </a>
-
-              <!-- Card 12 -->
-              <a href="https://kuhl.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(2deg) translateY(-8px); z-index: 12;">
-                <div class="card__media">
-                  <div class="media-wrapper media-wrapper--image">
-                    <div class="media-placeholder" style="padding-bottom: 120%;">
-                      <img data-src="wp-content/uploads/2024/07/WildhoodCrewneckGreen-1440x725.jpg" class="lazy-image">
-                    </div>
-                  </div>
-                </div>
-                <div class="card__content">
-                  <span class="card__title h5">
-                    <span>
-                      <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
-                      Utah Boutique
-                    </span>
-                    <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
-                  </span>
-                </div>
-              </a>
+              </div>
             </div>
-          </div>
+            <div class="card__content">
+              <span class="card__title h5">
+                <span>
+                  <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
+                  Valter's Osteria
+                </span>
+                <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a href="https://utahmountainadventures.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(2deg) translateY(-8px); z-index: 2;">
+            <div class="card__media">
+              <div class="media-wrapper media-wrapper--image">
+                <div class="media-placeholder" style="padding-bottom: 120%;">
+                  <img data-src="wp-content/uploads/2026/05/GRVC-LTT_foodie.jpg" class="lazy-image">
+                </div>
+              </div>
+            </div>
+            <div class="card__content">
+              <span class="card__title h5">
+                <span>
+                  <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
+                  Utah Mountain Adv.
+                </span>
+                <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a href="https://snowbird.com/cliff-spa" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-3deg) translateY(12px); z-index: 3;">
+            <div class="card__media">
+              <div class="media-wrapper media-wrapper--image">
+                <div class="media-placeholder" style="padding-bottom: 120%;">
+                  <img data-src="wp-content/uploads/2025/08/Go-Rving-Toronto-RV-Show-2025-65-1440x960.jpg" class="lazy-image">
+                </div>
+              </div>
+            </div>
+            <div class="card__content">
+              <span class="card__title h5">
+                <span>
+                  <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
+                  The Cliff Spa
+                </span>
+                <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 4 -->
+          <a href="https://kuhl.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(1deg) translateY(-4px); z-index: 4;">
+            <div class="card__media">
+              <div class="media-wrapper media-wrapper--image">
+                <div class="media-placeholder" style="padding-bottom: 120%;">
+                  <img data-src="wp-content/uploads/2024/07/WildhoodCrewneckGreen-1440x725.jpg" class="lazy-image">
+                </div>
+              </div>
+            </div>
+            <div class="card__content">
+              <span class="card__title h5">
+                <span>
+                  <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
+                  Kuhl Outdoors
+                </span>
+                <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 5 -->
+          <a href="https://log-haven.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-2.5deg) translateY(8px); z-index: 5;">
+            <div class="card__media">
+              <div class="media-wrapper media-wrapper--image">
+                <div class="media-placeholder" style="padding-bottom: 120%;">
+                  <img data-src="wp-content/uploads/2024/07/campers-with-trailer-campground-450x540.jpg" class="lazy-image">
+                </div>
+              </div>
+            </div>
+            <div class="card__content">
+              <span class="card__title h5">
+                <span>
+                  <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
+                  Log Haven Rest.
+                </span>
+                <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 6 -->
+          <a href="https://snowbird.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(3deg) translateY(-10px); z-index: 6;">
+            <div class="card__media">
+              <div class="media-wrapper media-wrapper--image">
+                <div class="media-placeholder" style="padding-bottom: 120%;">
+                  <img data-src="wp-content/uploads/2024/10/truck-camper-easy-to-drive-450x530.jpg" class="lazy-image">
+                </div>
+              </div>
+            </div>
+            <div class="card__content">
+              <span class="card__title h5">
+                <span>
+                  <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
+                  Snowbird Adventure
+                </span>
+                <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 7 -->
+          <a href="https://snowbird.com/cliff-spa" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-1deg) translateY(3px); z-index: 7;">
+            <div class="card__media">
+              <div class="media-wrapper media-wrapper--image">
+                <div class="media-placeholder" style="padding-bottom: 120%;">
+                  <img data-src="wp-content/uploads/2025/08/Go-Rving-Toronto-RV-Show-2025-65-1440x960.jpg" class="lazy-image">
+                </div>
+              </div>
+            </div>
+            <div class="card__content">
+              <span class="card__title h5">
+                <span>
+                  <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
+                  Kapi Massage
+                </span>
+                <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 8 -->
+          <a href="https://valtersosteria.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(2.5deg) translateY(-6px); z-index: 8;">
+            <div class="card__media">
+              <div class="media-wrapper media-wrapper--image">
+                <div class="media-placeholder" style="padding-bottom: 120%;">
+                  <img data-src="wp-content/uploads/2026/05/GRVC-LTT_foodie.jpg" class="lazy-image">
+                </div>
+              </div>
+            </div>
+            <div class="card__content">
+              <span class="card__title h5">
+                <span>
+                  <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
+                  Ruth's Chris
+                </span>
+                <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 9 -->
+          <a href="https://log-haven.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-2.5deg) translateY(10px); z-index: 9;">
+            <div class="card__media">
+              <div class="media-wrapper media-wrapper--image">
+                <div class="media-placeholder" style="padding-bottom: 120%;">
+                  <img data-src="wp-content/uploads/2024/07/campers-with-trailer-campground-450x540.jpg" class="lazy-image">
+                </div>
+              </div>
+            </div>
+            <div class="card__content">
+              <span class="card__title h5">
+                <span>
+                  <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
+                  Wellness Cabin
+                </span>
+                <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 10 -->
+          <a href="https://utahmountainadventures.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(1.5deg) translateY(-5px); z-index: 10;">
+            <div class="card__media">
+              <div class="media-wrapper media-wrapper--image">
+                <div class="media-placeholder" style="padding-bottom: 120%;">
+                  <img data-src="wp-content/uploads/2026/08/Baltimore-Oriole-how-to-start-birdwatching-1440x960.jpg" class="lazy-image">
+                </div>
+              </div>
+            </div>
+            <div class="card__content">
+              <span class="card__title h5">
+                <span>
+                  <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
+                  Wasatch Climbing
+                </span>
+                <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 11 -->
+          <a href="https://snowbird.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-3deg) translateY(12px); z-index: 11;">
+            <div class="card__media">
+              <div class="media-wrapper media-wrapper--image">
+                <div class="media-placeholder" style="padding-bottom: 120%;">
+                  <img data-src="wp-content/uploads/2024/10/truck-camper-easy-to-drive-450x530.jpg" class="lazy-image">
+                </div>
+              </div>
+            </div>
+            <div class="card__content">
+              <span class="card__title h5">
+                <span>
+                  <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
+                  Millcreek Trails
+                </span>
+                <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 12 -->
+          <a href="https://kuhl.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(2deg) translateY(-8px); z-index: 12;">
+            <div class="card__media">
+              <div class="media-wrapper media-wrapper--image">
+                <div class="media-placeholder" style="padding-bottom: 120%;">
+                  <img data-src="wp-content/uploads/2024/07/WildhoodCrewneckGreen-1440x725.jpg" class="lazy-image">
+                </div>
+              </div>
+            </div>
+            <div class="card__content">
+              <span class="card__title h5">
+                <span>
+                  <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
+                  Utah Boutique
+                </span>
+                <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
+              </span>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
   </div>
