@@ -1150,6 +1150,24 @@ section.follow {
   overflow: visible !important;
 }
 
+/* Custom Footer Watermark typography class matching Go RVing layout */
+.footer-watermark {
+  font-family: "Maison Neue", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 900 !important;
+  font-stretch: normal !important;
+  font-size: clamp(7.5rem, 16vw, 15rem) !important;
+  color: #fff9df !important;
+  opacity: 0.08 !important;
+  letter-spacing: -0.04em !important;
+  white-space: nowrap !important;
+  display: inline-block !important;
+  text-transform: none !important;
+  line-height: 0.8 !important;
+  -webkit-text-stroke: 3.5px #fff9df !important;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 @media (max-width: 768px) {
   .leaderboard-card {
     flex-direction: column;
@@ -2347,7 +2365,7 @@ section.follow {
           <div class="footer__bottom" style="position: relative; overflow: hidden; min-height: 260px; padding: 60px 0;">
             <!-- Giant watermark text logo replacing Go RVing SVG exactly like the original design -->
             <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; text-align: center; pointer-events: none; z-index: 0; line-height: 0.8; overflow: visible;">
-              <span style="font-family: 'Agipo', 'Maison Neue', Helvetica, Arial, sans-serif !important; font-weight: 700 !important; font-stretch: condensed !important; font-size: clamp(8rem, 18vw, 17rem) !important; color: #fff9df !important; opacity: 0.08 !important; letter-spacing: -0.05em !important; white-space: nowrap !important; display: inline-block !important; text-transform: none !important; select-style: none; -webkit-user-select: none; user-select: none; line-height: 0.8 !important;">
+              <span class="footer-watermark">
                 Utah's Best
               </span>
             </div>
