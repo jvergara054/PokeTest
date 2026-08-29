@@ -1060,7 +1060,7 @@ a[href^="https://explore-site.com/"],
   background: linear-gradient(90deg, #123d32 50%, transparent 50%);
 }
 
-/* Overlapping Scroller Styles (Clean native overflow swipe without GSAP pinning) */
+/* Overlapping Scroller Styles */
 .overlap-card-container {
   display: flex;
   flex-wrap: nowrap;
@@ -1081,7 +1081,7 @@ a[href^="https://explore-site.com/"],
 .overlap-card {
   flex: 0 0 300px;
   width: 300px;
-  margin-left: -20px; /* Spaced out further (overlap reduced from -30px to -20px) */
+  margin-left: -20px; /* Space the cards out slightly more */
   position: relative;
   transition: transform 0.3s ease, z-index 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
@@ -1092,6 +1092,37 @@ a[href^="https://explore-site.com/"],
   margin-left: 0 !important;
 }
 .overlap-card:hover {
+  transform: scale(1.08) rotate(0deg) translateY(-20px) !important;
+  z-index: 9999 !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Style for solid blue CTA cards in the scroller (Mockup style) */
+.overlap-card.solid-card {
+  background-color: #274b5c !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  padding: 30px !important;
+  height: 360px !important; /* Aligns height perfectly with image cards */
+}
+.overlap-card.solid-card .card__content {
+  padding: 0 !important;
+  background: none !important;
+}
+.overlap-card.solid-card .card__title {
+  font-size: 1.5rem !important;
+  font-weight: 900 !important;
+  color: #fff9df !important;
+  line-height: 1.2 !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  text-transform: uppercase !important;
+  margin: 0 !important;
+}
+.overlap-card.solid-card:hover {
   transform: scale(1.08) rotate(0deg) translateY(-20px) !important;
   z-index: 9999 !important;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
@@ -1989,20 +2020,23 @@ a[href^="https://explore-site.com/"],
   
       <section class="follow has-outer-borders">
       <div class="wrapper">
-          <!-- Left-Aligned Leaderboard-style Title Row -->
-          <div class="row" style="text-align: left; margin-bottom: 40px; padding-top: 60px;">
-            <div class="column small-12">
-              <h2 class="label has-square has-square--orange" style="margin-bottom: 20px;">Share</h2>
-              <h3 class="h2 uppercase" style="color: #fff9df; margin-bottom: 20px; font-weight: bold; line-height: 1.1;">Share Your Experience</h3>
-              <p style="color: #fff9df; max-width: 800px; font-size: 1.1rem; opacity: 0.9; margin: 0;">
-                Let everyone know how great the businesses in Utah are!
-              </p>
-            </div>
-          </div>
+          <div class="marquee" data-duration="8500"><div class="js-marquee-wrapper"><div class="js-marquee">
+              <span class="h3 h3--smaller-mobile uppercase">
+                  <span aria-hidden="false">You Are Out There</span>
+                  <span aria-hidden="true">You Are Out There</span>
+                  <span aria-hidden="true">You Are Out There</span>
+              </span>
+          </div><div class="js-marquee">
+              <span class="h3 h3--smaller-mobile uppercase">
+                  <span aria-hidden="false">You Are Out There</span>
+                  <span aria-hidden="true">You Are Out There</span>
+                  <span aria-hidden="true">You Are Out There</span>
+              </span>
+          </div></div></div>
       </div>
 
-      <!-- Static Row with native overflow-x horizontal swipe (No side-slider--auto class to prevent duplicate scroll-jacking) -->
-      <div style="overflow: visible; width: 100%;">
+      <!-- Restored GSAP scroll trigger slider (pins vertically and slides horizontally as you scroll down) -->
+      <div class="side-slider side-slider--auto" style="overflow: visible;">
         <div class="row overlap-card-container">
           <!-- Card 1: Follow Us (Instagram CTA from screenshot, layered at z-index 1) -->
           <a href="https://www.instagram.com/gorvingcanada" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-1.5deg) translateY(5px); z-index: 1;">
@@ -2017,7 +2051,7 @@ a[href^="https://explore-site.com/"],
               <span class="card__title h5">
                 <span>
                   <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
-                  Follow Us
+                  Follow Along
                 </span>
                 <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
               </span>
@@ -2204,40 +2238,24 @@ a[href^="https://explore-site.com/"],
             </div>
           </a>
 
-          <!-- Card 11: Wasatch Climbing (Outdoors, z-index 11) -->
-          <a href="https://utahmountainadventures.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-3deg) translateY(12px); z-index: 11;">
-            <div class="card__media">
-              <div class="media-wrapper media-wrapper--image">
-                <div class="media-placeholder" style="padding-bottom: 120%;">
-                  <img data-src="wp-content/uploads/2026/08/Baltimore-Oriole-how-to-start-birdwatching-1440x960.jpg" class="lazy-image">
-                </div>
-              </div>
-            </div>
+          <!-- Card 11: Find Your RV Match (Solid slate-blue mockup-style CTA card, z-index 11) -->
+          <a href="https://gorving.ca/find-an-rv-quiz/" class="card card--feature card--simple overlap-card solid-card" style="transform: rotate(-3deg) translateY(12px); z-index: 11;">
             <div class="card__content">
               <span class="card__title h5">
                 <span>
-                  <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
-                  Wasatch Climbing
+                  Find Your<br>RV Match
                 </span>
                 <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
               </span>
             </div>
           </a>
 
-          <!-- Card 12: Millcreek Trails (Outdoors, z-index 12) -->
-          <a href="https://snowbird.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(2deg) translateY(-8px); z-index: 12;">
-            <div class="card__media">
-              <div class="media-wrapper media-wrapper--image">
-                <div class="media-placeholder" style="padding-bottom: 120%;">
-                  <img data-src="wp-content/uploads/2024/10/truck-camper-easy-to-drive-450x530.jpg" class="lazy-image">
-                </div>
-              </div>
-            </div>
+          <!-- Card 12: Get The Merch (Solid slate-blue mockup-style CTA card, z-index 12) -->
+          <a href="https://store.gorving.ca/" class="card card--feature card--simple overlap-card solid-card" style="transform: rotate(2deg) translateY(-8px); z-index: 12;">
             <div class="card__content">
               <span class="card__title h5">
                 <span>
-                  <svg class="icon icon--instagram"><use xlink:href="#instagram"></use></svg>
-                  Millcreek Trails
+                  Get The<br>Merch
                 </span>
                 <span class="button button--xxsmall button--translucent button--icon"><svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg></span>
               </span>
