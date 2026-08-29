@@ -1139,9 +1139,18 @@ a[href^="https://explore-site.com/"],
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-/* Hide horizontal body overflow from the translated follow section */
-section.follow {
+/* Hide horizontal body overflow from the translated follow section and lock viewport */
+html,
+body,
+.site-wrap,
+#non-footer-site-wrap {
   overflow-x: hidden !important;
+}
+section.follow {
+  position: relative !important;
+  width: 100% !important;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
 }
 
 /* Overrides to prevent the theme's slider container from clipping our wide card deck */
