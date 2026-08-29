@@ -1067,15 +1067,9 @@ a[href^="https://explore-site.com/"],
   padding: 60px 0;
   margin: 0;
   position: relative;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  overflow: visible !important; /* Changed from auto to visible to allow cards to spill out */
   padding-left: max(20px, calc((100vw - 1200px) / 2));
   padding-right: max(20px, calc((100vw - 1200px) / 2 + 120px));
-}
-.overlap-card-container::-webkit-scrollbar {
-  display: none; /* Hide scrollbars for Chrome/Safari */
 }
 
 .overlap-card {
@@ -1126,6 +1120,17 @@ a[href^="https://explore-site.com/"],
   transform: scale(1.08) rotate(0deg) translateY(-20px) !important;
   z-index: 9999 !important;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Hide horizontal body overflow from the translated follow section */
+section.follow {
+  overflow-x: hidden !important;
+}
+
+/* Overrides to prevent the theme's slider container from clipping our wide card deck */
+.side-slider.side-slider--auto,
+.side-slider {
+  overflow: visible !important;
 }
 
 @media (max-width: 768px) {
@@ -1314,7 +1319,7 @@ a[href^="https://explore-site.com/"],
       </div>
     </section>
     <div id="scroll">
-            <div class="pin-spacer" style="z-index: auto; display: block;"><section class="homepage__experience-levels has-outer-borders" style="background-color: rgba(0, 0, 0, 0);">
+            <section class="homepage__experience-levels has-outer-borders" style="background-color: rgba(0, 0, 0, 0);">
       <div class="wrapper">
         <div class="side-slider side-slider--auto">
           <div class="row">
@@ -1421,8 +1426,8 @@ a[href^="https://explore-site.com/"],
                       </div>
         </div>
       </div>
-    </section></div>
-                  <div class="pin-spacer" style="z-index: auto; display: block;"><section class="homepage__rvs has-background-media has-dark-background has-outer-borders">
+    </section>
+                  <section class="homepage__rvs has-background-media has-dark-background has-outer-borders">
       <div class="homepage__rvs__sidebar">
         <div class="wrapper">
           <div class="row">
@@ -1593,7 +1598,7 @@ a[href^="https://explore-site.com/"],
           </div>
         </div>
       </div>
-    </section></div></div>
+    </section></div>
         <!-- LEADERBOARD SECTION (Replaces Latest) -->
    <section id="leaderboard" class="has-outer-borders" style="padding: 100px 0; background-color: #f6f4ed; position: relative; z-index: 10;">
       <div class="wrapper">
@@ -1864,6 +1869,14 @@ a[href^="https://explore-site.com/"],
             </div>
           `;
         }).join('');
+
+        // Recalculate and sort ScrollTrigger offsets once the dynamic leaderboard items expand
+        if (typeof ScrollTrigger !== 'undefined') {
+          setTimeout(() => {
+            ScrollTrigger.sort();
+            ScrollTrigger.refresh();
+          }, 100);
+        }
       }
 
       window.openBiddingModal = function(name = "", category = "food", minBid = 10) {
@@ -2035,8 +2048,8 @@ a[href^="https://explore-site.com/"],
           </div></div></div>
       </div>
 
-      <!-- Restored GSAP scroll trigger slider (pins vertically and slides horizontally as you scroll down) -->
-      <div class="side-slider side-slider--auto" style="overflow: visible;">
+      <!-- Restored GSAP scroll trigger slider -->
+      <div class="side-slider side-slider--auto">
         <div class="row overlap-card-container">
           <!-- Card 1: Follow Us (Instagram CTA from screenshot, layered at z-index 1) -->
           <a href="https://www.instagram.com/gorvingcanada" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-1.5deg) translateY(5px); z-index: 1;">
@@ -2460,4 +2473,15 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
       .chatbase-spinner { animation: chatbase-spin 2s linear infinite, chatbase-dash 1.5s ease-in-out infinite; transform-origin: center; }
     </style>
     <circle class="chatbase-spinner" cx="12" cy="12" r="10" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"></circle>
-  </svg></div><iframe allow="microphone" title="Chatbot" style="display: flex;"></iframe></div></body></html>
+  </svg></div><iframe allow="microphone" title="Chatbot" style="display: flex;"></iframe></div><script>
+  window.addEventListener('load', () => {
+    if (typeof ScrollTrigger !== 'undefined') {
+      setTimeout(() => {
+        console.log("Sorting and refreshing ScrollTriggers on window load...");
+        ScrollTrigger.sort();
+        ScrollTrigger.refresh();
+      }, 500);
+    }
+  });
+</script>
+</body></html>
