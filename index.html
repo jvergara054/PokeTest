@@ -1060,20 +1060,28 @@ a[href^="https://explore-site.com/"],
   background: linear-gradient(90deg, #123d32 50%, transparent 50%);
 }
 
-/* Overlapping Scroller Styles */
+/* Overlapping Scroller Styles (Clean native overflow swipe without GSAP pinning) */
 .overlap-card-container {
   display: flex;
   flex-wrap: nowrap;
   padding: 60px 0;
   margin: 0;
   position: relative;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   padding-left: max(20px, calc((100vw - 1200px) / 2));
   padding-right: max(20px, calc((100vw - 1200px) / 2 + 120px));
 }
+.overlap-card-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbars for Chrome/Safari */
+}
+
 .overlap-card {
   flex: 0 0 300px;
   width: 300px;
-  margin-left: -60px; /* Reduced overlap for better spacing */
+  margin-left: -60px;
   position: relative;
   transition: transform 0.3s ease, z-index 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
@@ -1587,7 +1595,7 @@ a[href^="https://explore-site.com/"],
    <!-- HOW IT WORKS SECTION -->
    <section id="how-it-works" class="has-outer-borders" style="padding: 100px 0; background-color: #123d32; position: relative; z-index: 10;">
      <div class="wrapper">
-       <div class="side-slider side-slider--auto">
+       <div class="static-slider">
          <div class="row">
            <div class="column small-12" style="text-align: center; margin-bottom: 60px;">
              <h2 class="label has-square has-square--orange" style="margin: 0 auto 20px auto; display: inline-flex; align-items: center;">The Bidding Rules</h2>
@@ -1993,8 +2001,8 @@ a[href^="https://explore-site.com/"],
           </div>
       </div>
 
-      <!-- Side Slider with 12 Overlapping Cards (outside the wrapper to allow viewport overflow and slide pinning) -->
-      <div class="side-slider side-slider--auto" style="overflow: visible;">
+      <!-- Static Row with native overflow-x horizontal swipe (No side-slider--auto class to prevent duplicate scroll-jacking) -->
+      <div style="overflow: visible; width: 100%;">
         <div class="row overlap-card-container">
           <!-- Card 1 -->
           <a href="https://valtersosteria.com" target="_blank" class="card card--feature card--simple overlap-card" style="transform: rotate(-1.5deg) translateY(5px); z-index: 1;">
