@@ -1292,6 +1292,57 @@ div[id^="breadbutter-"] {
     text-align: left;
   }
 }
+/* 6-Tab Interactive Sidebar Styling */
+.homepage__rvs .homepage__rvs__sidebar .homepage__rvs__types-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  margin-top: 12px !important;
+  margin-bottom: 24px !important;
+}
+.homepage__rvs .homepage__rvs__types-list li {
+  opacity: 0.35 !important;
+  top: 0 !important;
+  transform: none !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 10px !important;
+}
+.homepage__rvs .homepage__rvs__types-list li a {
+  cursor: pointer !important;
+  font-size: clamp(1.5rem, 2.4vw, 2.4rem) !important;
+  line-height: 1.15 !important;
+  color: #ece7de !important;
+  transition: color 0.2s ease !important;
+  letter-spacing: -0.02em !important;
+}
+.homepage__rvs .homepage__rvs__types-list li span {
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  opacity: 0.7 !important;
+  color: #fc6b3e !important;
+}
+.homepage__rvs .homepage__rvs__types-list li:hover {
+  opacity: 0.75 !important;
+}
+.homepage__rvs .homepage__rvs__types-list li.is-active {
+  opacity: 1 !important;
+  transform: translateX(8px) !important;
+}
+.homepage__rvs .homepage__rvs__types-list li.is-active a {
+  color: #ffffff !important;
+}
+.homepage__rvs .homepage__rvs__types-list li.is-active span {
+  opacity: 1 !important;
+}
+.homepage__rvs .homepage__rvs__type {
+  height: 100% !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
 </style>
 
 </head>
@@ -1583,17 +1634,29 @@ div[id^="breadbutter-"] {
             <div class="column small-12 xlarge-6">
               <h2 class="label has-square has-square--orange">Top Highlights</h2>
               <ul class="homepage__rvs__types-list">
-                <li>
-                  <a href="javascript:void(0)" class="h2 uppercase" onclick="window.setLeaderboardFilter('food')">Dine</a>
-                  <span>2</span>
+                <li class="is-active" data-tab-index="0">
+                  <a href="javascript:void(0)" class="h2 uppercase">Top Weeks</a>
+                  <span>01</span>
                 </li>
-                <li>
-                  <a href="javascript:void(0)" class="h2 uppercase" onclick="window.setLeaderboardFilter('outdoors')">Explore</a>
-                  <span>2</span>
+                <li data-tab-index="1">
+                  <a href="javascript:void(0)" class="h2 uppercase">Rank #1</a>
+                  <span>02</span>
                 </li>
-                <li>
-                  <a href="javascript:void(0)" class="h2 uppercase" onclick="window.setLeaderboardFilter('wellness')">Stay</a>
-                  <span>2</span>
+                <li data-tab-index="2">
+                  <a href="javascript:void(0)" class="h2 uppercase">Rank #2</a>
+                  <span>03</span>
+                </li>
+                <li data-tab-index="3">
+                  <a href="javascript:void(0)" class="h2 uppercase">Rank #3</a>
+                  <span>04</span>
+                </li>
+                <li data-tab-index="4">
+                  <a href="javascript:void(0)" class="h2 uppercase">Rank #4</a>
+                  <span>05</span>
+                </li>
+                <li data-tab-index="5">
+                  <a href="javascript:void(0)" class="h2 uppercase">Rank #5</a>
+                  <span>06</span>
                 </li>
               </ul>
               <a href="#leaderboard" class="button button--black large-up">
@@ -1607,14 +1670,15 @@ div[id^="breadbutter-"] {
         </div>
       </div>
       <div class="homepage__rvs__main">
-        <!-- Tab 1: Dine (2 slides: Slide 1 Our Top Weeks Businesses, Slide 2 Rank #1 Valter's Osteria) -->
-        <div class="homepage__rvs__type">
+        <!-- 6 Tabs / 6 Slides in Total -->
+        <div class="homepage__rvs__type" style="height: 100% !important; display: block !important; opacity: 1 !important; visibility: visible !important;">
           <div class="homepage__rvs__type__left slick-arrow"></div>
           <div class="homepage__rvs__type__cursor button button--small button--orange">
-            <svg class="icon icon--chevron-left"><use xlink:href="#chevron-left"></use></svg> <span data-slide-num="">1</span> / 2 <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+            <svg class="icon icon--chevron-left"><use xlink:href="#chevron-left"></use></svg> <span data-slide-num="">1</span> / 6 <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
           </div>
           <div class="homepage__rvs__type__slider">
-            <!-- Slide 1: Our Top Weeks Businesses -->
+            
+            <!-- Tab 1 / Slide 1: Our Top Weeks Businesses -->
             <div class="homepage__rvs__model">
               <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.66%;"><img data-src="wp-content/uploads/2026/08/Baltimore-Oriole-how-to-start-birdwatching-1440x960.jpg" alt="Our Top Weeks Businesses" class="lazy-image"></div></div>
               <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.6%;"><img data-src="wp-content/uploads/2026/08/Baltimore-Oriole-how-to-start-birdwatching-1440x960.jpg" alt="Our Top Weeks Businesses" class="lazy-image"></div></div>
@@ -1637,7 +1701,7 @@ div[id^="breadbutter-"] {
               </div>
             </div>
 
-            <!-- Slide 2: Rank #1 - Valter's Osteria -->
+            <!-- Tab 2 / Slide 2: Rank #1 - Valter's Osteria -->
             <div class="homepage__rvs__model">
               <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.66%;"><img data-src="wp-content/uploads/2026/08/Baltimore-Oriole-how-to-start-birdwatching-1440x960.jpg" alt="Valter's Osteria" class="lazy-image"></div></div>
               <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.6%;"><img data-src="wp-content/uploads/2026/08/Baltimore-Oriole-how-to-start-birdwatching-1440x960.jpg" alt="Valter's Osteria" class="lazy-image"></div></div>
@@ -1659,17 +1723,8 @@ div[id^="breadbutter-"] {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Tab 2: Explore (2 slides: Slide 3 Rank #2 Kühl Outdoors, Slide 4 Rank #3 Utah Mountain Adventures) -->
-        <div class="homepage__rvs__type">
-          <div class="homepage__rvs__type__left slick-arrow"></div>
-          <div class="homepage__rvs__type__cursor button button--small button--orange">
-            <svg class="icon icon--chevron-left"><use xlink:href="#chevron-left"></use></svg> <span data-slide-num="">1</span> / 2 <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
-          </div>
-          <div class="homepage__rvs__type__slider">
-            <!-- Slide 3: Rank #2 - Kühl Outdoors -->
+            <!-- Tab 3 / Slide 3: Rank #2 - Kühl Outdoors -->
             <div class="homepage__rvs__model">
               <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.66%;"><img data-src="wp-content/uploads/2024/07/WildhoodCrewneckGreen-1440x725.jpg" alt="Kuhl Outdoors" class="lazy-image"></div></div>
               <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.6%;"><img data-src="wp-content/uploads/2024/07/WildhoodCrewneckGreen-1440x725.jpg" alt="Kuhl Outdoors" class="lazy-image"></div></div>
@@ -1692,7 +1747,7 @@ div[id^="breadbutter-"] {
               </div>
             </div>
 
-            <!-- Slide 4: Rank #3 - Utah Mountain Adventures -->
+            <!-- Tab 4 / Slide 4: Rank #3 - Utah Mountain Adventures -->
             <div class="homepage__rvs__model">
               <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.66%;"><img data-src="wp-content/uploads/2026/05/GRVC-LTT_foodie.jpg" alt="Utah Mountain Adventures" class="lazy-image"></div></div>
               <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.6%;"><img data-src="wp-content/uploads/2026/05/GRVC-LTT_foodie.jpg" alt="Utah Mountain Adventures" class="lazy-image"></div></div>
@@ -1714,17 +1769,8 @@ div[id^="breadbutter-"] {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Tab 3: Stay (2 slides: Slide 5 Rank #4 The Cliff Spa, Slide 6 Rank #5 Log Haven Restaurant) -->
-        <div class="homepage__rvs__type">
-          <div class="homepage__rvs__type__left slick-arrow"></div>
-          <div class="homepage__rvs__type__cursor button button--small button--orange">
-            <svg class="icon icon--chevron-left"><use xlink:href="#chevron-left"></use></svg> <span data-slide-num="">1</span> / 2 <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
-          </div>
-          <div class="homepage__rvs__type__slider">
-            <!-- Slide 5: Rank #4 - The Cliff Spa -->
+            <!-- Tab 5 / Slide 5: Rank #4 - The Cliff Spa -->
             <div class="homepage__rvs__model">
               <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.66%;"><img data-src="wp-content/uploads/2025/08/Go-Rving-Toronto-RV-Show-2025-65-1440x960.jpg" alt="The Cliff Spa" class="lazy-image"></div></div>
               <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.6%;"><img data-src="wp-content/uploads/2025/08/Go-Rving-Toronto-RV-Show-2025-65-1440x960.jpg" alt="The Cliff Spa" class="lazy-image"></div></div>
@@ -1747,7 +1793,7 @@ div[id^="breadbutter-"] {
               </div>
             </div>
 
-            <!-- Slide 6: Rank #5 - Log Haven Restaurant -->
+            <!-- Tab 6 / Slide 6: Rank #5 - Log Haven Restaurant -->
             <div class="homepage__rvs__model">
               <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.66%;"><img data-src="wp-content/uploads/2026/05/GRVC-LTT_foodie.jpg" alt="Log Haven" class="lazy-image"></div></div>
               <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.6%;"><img data-src="wp-content/uploads/2026/05/GRVC-LTT_foodie.jpg" alt="Log Haven" class="lazy-image"></div></div>
@@ -1769,6 +1815,7 @@ div[id^="breadbutter-"] {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -2588,6 +2635,29 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
   <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a31532ce2f991492',t:'MTc4Nzc3MjA3NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1"></iframe>
 
 <script async="" src="wp-includes/js/search-insights.js"></script><!-- Removed Chatbase elements --><script>
+  // Synchronize 6 tabs with Slick slider in homepage__rvs
+  if (typeof jQuery !== 'undefined') {
+    jQuery(function($) {
+      var $slider = $('.homepage__rvs__type__slider');
+      var $tabs = $('.homepage__rvs__types-list li');
+      var $cursorNum = $('.homepage__rvs__type__cursor [data-slide-num]');
+
+      $tabs.on('click', function(e) {
+        e.preventDefault();
+        var idx = $(this).data('tab-index');
+        if (typeof idx !== 'undefined') {
+          $slider.slick('slickGoTo', parseInt(idx));
+          $tabs.removeClass('is-active').filter('[data-tab-index="' + idx + '"]').addClass('is-active');
+        }
+      });
+
+      $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+        $tabs.removeClass('is-active').filter('[data-tab-index="' + nextSlide + '"]').addClass('is-active');
+        $cursorNum.text(nextSlide + 1);
+      });
+    });
+  }
+
   window.addEventListener('load', () => {
     // Custom GSAP horizontal scroll registration for Utah's Best card deck
     const slider = document.querySelector('.side-slider--custom-auto');
