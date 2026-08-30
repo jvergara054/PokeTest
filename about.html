@@ -1210,6 +1210,61 @@ div[id^="breadbutter-"] {
   background-color: #4f87c7 !important;
 }
 
+/* Header 3-Column Navigation Grid */
+.header .header-custom-layout {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 40px !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+}
+
+@media (min-width: 1024px) {
+  .header__nav-left {
+    flex: 1 1 0% !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+  }
+  .header__nav-center {
+    flex: 0 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .header__nav-right {
+    flex: 1 1 0% !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+  }
+  .header .header__logo {
+    position: static !important;
+    transform: none !important;
+    margin: 0 auto !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .header .header-custom-layout {
+    padding: 0 20px !important;
+  }
+  .header__nav-left,
+  .header__nav-right {
+    display: none !important;
+  }
+  .header__nav-center {
+    margin: 0 auto !important;
+  }
+}
+
 @media (max-width: 768px) {
   .leaderboard-card {
     flex-direction: column;
@@ -1261,24 +1316,20 @@ div[id^="breadbutter-"] {
 <div class="site-wrap">
     <div class="non-footer-site-wrap" id="non-footer-site-wrap">
         <header class="header has-dark-background is-sticky" style="position: sticky; top: 0; z-index: 100; background-color: #123d32 !important; border-bottom: 1px solid rgba(255, 249, 223, 0.1);">
-            <div class="wrapper">
-                <!-- Desktop nav menu -->
-                <nav class="header__dropdowns large-up">
-                    <ul>
+            <div class="wrapper header-custom-layout">
+                <!-- Desktop Left Nav -->
+                <nav class="header__nav-left large-up">
+                    <ul style="display: flex; align-items: center; gap: 30px; margin: 0; padding: 0; list-style: none;">
                         <li>
-                            <a href="/#leaderboard" style="font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em;">Leaderboard</a>
+                            <a href="/#leaderboard" style="font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; color: #fff9df; font-size: 0.95rem;">Leaderboard</a>
                         </li>
                         <li>
-                            <a href="/#how-it-works" style="font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em;">How It Works</a>
-                        </li>
-                        <li>
-                            <a href="/about" style="font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; color: #fc6b3e;">About</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)" onclick="window.openBiddingModal()" class="button button--small button--orange" style="margin-left: 20px; padding: 10px 20px; color: #123d32; font-weight: bold; border-radius: 4px;">List Your Business</a>
+                            <a href="/#how-it-works" style="font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; color: #fff9df; font-size: 0.95rem;">How It Works</a>
                         </li>
                     </ul>
                 </nav>
+
+                <!-- Mobile Menu Toggle (Left on mobile) -->
                 <div class="header__mobile-menu large-down">
                     <button data-drawer="mobile-menu" class="toggle">
                         <span class="toggle__closed">
@@ -1299,7 +1350,7 @@ div[id^="breadbutter-"] {
                                         <div class="row">
                                             <div class="column">
                                                 <nav>
-                                                    <ul style="padding: 20px 0;">
+                                                    <ul style="padding: 20px 0; list-style: none;">
                                                         <li style="margin-bottom: 20px;">
                                                             <a href="/#leaderboard" onclick="document.querySelector('[data-drawer=\'mobile-menu\']').click()" class="h4 uppercase" style="color: #fff9df;">Leaderboard</a>
                                                         </li>
@@ -1323,12 +1374,29 @@ div[id^="breadbutter-"] {
                         <div class="drawer__overlay"></div>
                     </div>
                 </div>
-                <!-- Logo -->
-                <a href="/" class="header__logo">
-                    <span class="logo-text-desktop" style="font-family: Maison Neue, Helvetica, Arial, sans-serif; font-weight: bold; font-size: 1.2rem; color: #fff9df; text-transform: uppercase; letter-spacing: 0.1em; margin-right: 10px; display: inline-block; vertical-align: middle;">Utah's Best</span>
-                    <svg class="icon icon--logomark"><use xlink:href="#logomark"></use></svg>
-                    <span class="accessible">Utah's Best Businesses</span>
-                </a>
+
+                <!-- Centered Logo / Site Name -->
+                <div class="header__nav-center">
+                    <a href="/" class="header__logo" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; position: static; transform: none; top: auto; left: auto; margin: 0 auto;">
+                        <span class="logo-text-desktop" style="font-family: 'Maison Neue', Helvetica, Arial, sans-serif; font-weight: 900; font-size: 1.25rem; color: #fff9df; text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap; display: inline-flex; align-items: center; gap: 8px;">
+                            Utah's Best <span style="background-color: #fc6b3e; color: #123d32; font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; font-weight: 900; letter-spacing: 0.08em; line-height: 1; display: inline-block;">UBB</span>
+                        </span>
+                        <svg class="icon icon--logomark" style="width: 22px; height: 22px; fill: #fc6b3e;"><use xlink:href="#logomark"></use></svg>
+                        <span class="accessible">Utah's Best Businesses</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Right Nav -->
+                <nav class="header__nav-right large-up">
+                    <ul style="display: flex; align-items: center; gap: 25px; margin: 0; padding: 0; list-style: none;">
+                        <li>
+                            <a href="/about" style="font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; color: #fc6b3e; font-size: 0.95rem;">About</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" onclick="window.openBiddingModal()" class="button button--small button--orange" style="padding: 10px 20px; color: #123d32; font-weight: bold; border-radius: 4px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap;">List Your Business</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </header>
 
