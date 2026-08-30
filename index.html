@@ -1584,16 +1584,8 @@ div[id^="breadbutter-"] {
               <h2 class="label has-square has-square--orange">Top Highlights</h2>
               <ul class="homepage__rvs__types-list">
                 <li>
-                  <a href="javascript:void(0)" class="h2 uppercase" onclick="window.setLeaderboardFilter('food')">Dine</a>
-                  <span>2</span>
-                </li>
-                <li>
-                  <a href="javascript:void(0)" class="h2 uppercase" onclick="window.setLeaderboardFilter('outdoors')">Explore</a>
-                  <span>2</span>
-                </li>
-                <li>
-                  <a href="javascript:void(0)" class="h2 uppercase" onclick="window.setLeaderboardFilter('wellness')">Stay</a>
-                  <span>1</span>
+                  <a href="javascript:void(0)" class="h2 uppercase" onclick="window.setLeaderboardFilter('all')">Featured</a>
+                  <span>6</span>
                 </li>
               </ul>
               <a href="#leaderboard" class="button button--black large-up">
@@ -1607,24 +1599,48 @@ div[id^="breadbutter-"] {
         </div>
       </div>
       <div class="homepage__rvs__main">
-        <!-- Tab 1: Dine (2 slides: Valter's Rank #1, Log Haven Rank #5) -->
-        <div class="homepage__rvs__type">
+        <!-- 6 Highlight Slides in Total -->
+        <div class="homepage__rvs__type" style="height: 100% !important; display: block !important; opacity: 1 !important;">
           <div class="homepage__rvs__type__left slick-arrow"></div>
           <div class="homepage__rvs__type__cursor button button--small button--orange">
-            <svg class="icon icon--chevron-left"><use xlink:href="#chevron-left"></use></svg> <span data-slide-num="">1</span> / 2 <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+            <svg class="icon icon--chevron-left"><use xlink:href="#chevron-left"></use></svg> <span data-slide-num="">1</span> / 6 <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
           </div>
           <div class="homepage__rvs__type__slider">
-            <!-- Slide 1: Valter's Osteria -->
+            
+            <!-- Slide 1: Our Top Weeks Businesses -->
+            <div class="homepage__rvs__model">
+              <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.66%;"><img data-src="wp-content/uploads/2026/08/Baltimore-Oriole-how-to-start-birdwatching-1440x960.jpg" alt="Our Top Weeks Businesses" class="lazy-image"></div></div>
+              <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.6%;"><img data-src="wp-content/uploads/2026/08/Baltimore-Oriole-how-to-start-birdwatching-1440x960.jpg" alt="Our Top Weeks Businesses" class="lazy-image"></div></div>
+              <div class="wrapper">
+                <span class="label has-square has-square--orange">Our Top Weeks Businesses</span>
+                <div class="row">
+                  <div class="column small-12 xlarge-offset-6 xlarge-6">
+                    <h3 class="h5 uppercase">Utah's Premier Top 5</h3>
+                    <div class="wysiwyg">
+                      <p>Spotlighting the highest-ranked local businesses and standout leaders across Utah, updated weekly through community ratings and verified excellence.</p>
+                    </div>
+                    <a href="#leaderboard" class="button button--orange large-up">
+                      Explore Leaderboard <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+                    </a>
+                    <a href="#leaderboard" class="arrow-link large-down">
+                      Explore Leaderboard <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Rank #1 - Valter's Osteria -->
             <div class="homepage__rvs__model">
               <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.66%;"><img data-src="wp-content/uploads/2026/08/Baltimore-Oriole-how-to-start-birdwatching-1440x960.jpg" alt="Valter's Osteria" class="lazy-image"></div></div>
               <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.6%;"><img data-src="wp-content/uploads/2026/08/Baltimore-Oriole-how-to-start-birdwatching-1440x960.jpg" alt="Valter's Osteria" class="lazy-image"></div></div>
               <div class="wrapper">
-                <span class="label has-square has-square--orange">Rank #1 - Dine</span>
+                <span class="label has-square has-square--orange">Rank #1 · Dine</span>
                 <div class="row">
                   <div class="column small-12 xlarge-offset-6 xlarge-6">
                     <h3 class="h5 uppercase">Valter's Osteria</h3>
                     <div class="wysiwyg">
-                      <p>Salt Lake's legendary, upscale Italian fine dining experience and chef's table.</p>
+                      <p>Salt Lake's legendary, upscale Italian fine dining experience and chef's table in downtown SLC.</p>
                     </div>
                     <a href="https://valtersosteria.com" target="_blank" class="button button--orange large-up">
                       Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
@@ -1636,49 +1652,18 @@ div[id^="breadbutter-"] {
                 </div>
               </div>
             </div>
-            <!-- Slide 2: Log Haven -->
-            <div class="homepage__rvs__model">
-              <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.66%;"><img data-src="wp-content/uploads/2026/05/GRVC-LTT_foodie.jpg" alt="Log Haven" class="lazy-image"></div></div>
-              <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.6%;"><img data-src="wp-content/uploads/2026/05/GRVC-LTT_foodie.jpg" alt="Log Haven" class="lazy-image"></div></div>
-              <div class="wrapper">
-                <span class="label has-square has-square--orange">Rank #5 - Dine</span>
-                <div class="row">
-                  <div class="column small-12 xlarge-offset-6 xlarge-6">
-                    <h3 class="h5 uppercase">Log Haven Restaurant</h3>
-                    <div class="wysiwyg">
-                      <p>Romance and fine dining in a historic log mansion nestled in Millcreek Canyon.</p>
-                    </div>
-                    <a href="https://log-haven.com" target="_blank" class="button button--orange large-up">
-                      Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
-                    </a>
-                    <a href="https://log-haven.com" target="_blank" class="arrow-link large-down">
-                      Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- Tab 2: Explore (2 slides: Kuhl Rank #2, Utah Mountain Adventures Rank #3) -->
-        <div class="homepage__rvs__type">
-          <div class="homepage__rvs__type__left slick-arrow"></div>
-          <div class="homepage__rvs__type__cursor button button--small button--orange">
-            <svg class="icon icon--chevron-left"><use xlink:href="#chevron-left"></use></svg> <span data-slide-num="">1</span> / 2 <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
-          </div>
-          <div class="homepage__rvs__type__slider">
-            <!-- Slide 1: Kuhl Outdoors -->
+            <!-- Slide 3: Rank #2 - Kühl Outdoors -->
             <div class="homepage__rvs__model">
               <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.66%;"><img data-src="wp-content/uploads/2024/07/WildhoodCrewneckGreen-1440x725.jpg" alt="Kuhl Outdoors" class="lazy-image"></div></div>
               <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.6%;"><img data-src="wp-content/uploads/2024/07/WildhoodCrewneckGreen-1440x725.jpg" alt="Kuhl Outdoors" class="lazy-image"></div></div>
               <div class="wrapper">
-                <span class="label has-square has-square--orange">Rank #2 - Explore</span>
+                <span class="label has-square has-square--orange">Rank #2 · Explore</span>
                 <div class="row">
                   <div class="column small-12 xlarge-offset-6 xlarge-6">
-                    <h3 class="h5 uppercase">Kuhl Outdoors</h3>
+                    <h3 class="h5 uppercase">KÜHL Outdoors</h3>
                     <div class="wysiwyg">
-                      <p>Premium, mountain-born clothing and outdoor performance gear.</p>
+                      <p>Premium, mountain-born clothing, technical outerwear, and rugged performance gear.</p>
                     </div>
                     <a href="https://kuhl.com" target="_blank" class="button button--orange large-up">
                       Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
@@ -1690,17 +1675,18 @@ div[id^="breadbutter-"] {
                 </div>
               </div>
             </div>
-            <!-- Slide 2: Utah Mountain Adventures -->
+
+            <!-- Slide 4: Rank #3 - Utah Mountain Adventures -->
             <div class="homepage__rvs__model">
               <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.66%;"><img data-src="wp-content/uploads/2026/05/GRVC-LTT_foodie.jpg" alt="Utah Mountain Adventures" class="lazy-image"></div></div>
               <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.6%;"><img data-src="wp-content/uploads/2026/05/GRVC-LTT_foodie.jpg" alt="Utah Mountain Adventures" class="lazy-image"></div></div>
               <div class="wrapper">
-                <span class="label has-square has-square--orange">Rank #3 - Explore</span>
+                <span class="label has-square has-square--orange">Rank #3 · Explore</span>
                 <div class="row">
                   <div class="column small-12 xlarge-offset-6 xlarge-6">
                     <h3 class="h5 uppercase">Utah Mountain Adventures</h3>
                     <div class="wysiwyg">
-                      <p>The premier ski guiding and climbing instruction program in the Wasatch.</p>
+                      <p>The premier avalanche education, backcountry ski guiding, and climbing instruction in the Wasatch.</p>
                     </div>
                     <a href="https://utahmountainadventures.com" target="_blank" class="button button--orange large-up">
                       Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
@@ -1712,27 +1698,18 @@ div[id^="breadbutter-"] {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Tab 3: Stay (1 slide: The Cliff Spa Rank #4) -->
-        <div class="homepage__rvs__type">
-          <div class="homepage__rvs__type__left slick-arrow"></div>
-          <div class="homepage__rvs__type__cursor button button--small button--orange" style="display: none !important;">
-            <svg class="icon icon--chevron-left"><use xlink:href="#chevron-left"></use></svg> <span data-slide-num="">1</span> / 1 <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
-          </div>
-          <div class="homepage__rvs__type__slider">
-            <!-- Slide 1: The Cliff Spa -->
+            <!-- Slide 5: Rank #4 - The Cliff Spa -->
             <div class="homepage__rvs__model">
               <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.66%;"><img data-src="wp-content/uploads/2025/08/Go-Rving-Toronto-RV-Show-2025-65-1440x960.jpg" alt="The Cliff Spa" class="lazy-image"></div></div>
               <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.6%;"><img data-src="wp-content/uploads/2025/08/Go-Rving-Toronto-RV-Show-2025-65-1440x960.jpg" alt="The Cliff Spa" class="lazy-image"></div></div>
               <div class="wrapper">
-                <span class="label has-square has-square--orange">Rank #4 - Stay</span>
+                <span class="label has-square has-square--orange">Rank #4 · Stay</span>
                 <div class="row">
                   <div class="column small-12 xlarge-offset-6 xlarge-6">
                     <h3 class="h5 uppercase">The Cliff Spa</h3>
                     <div class="wysiwyg">
-                      <p>Rooftop pool, hot tub, and world-class spa treatments in Little Cottonwood Canyon.</p>
+                      <p>Rooftop heated pool, mountain-view hot tub, and world-class spa treatments in Little Cottonwood Canyon.</p>
                     </div>
                     <a href="https://snowbird.com/cliff-spa" target="_blank" class="button button--orange large-up">
                       Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
@@ -1744,6 +1721,30 @@ div[id^="breadbutter-"] {
                 </div>
               </div>
             </div>
+
+            <!-- Slide 6: Rank #5 - Log Haven Restaurant -->
+            <div class="homepage__rvs__model">
+              <div class="media-wrapper media-wrapper--image background-media medium-up"><div class="media-placeholder" style="padding-bottom: 66.66%;"><img data-src="wp-content/uploads/2026/05/GRVC-LTT_foodie.jpg" alt="Log Haven" class="lazy-image"></div></div>
+              <div class="media-wrapper media-wrapper--image background-media medium-down"><div class="media-placeholder" style="padding-bottom: 66.6%;"><img data-src="wp-content/uploads/2026/05/GRVC-LTT_foodie.jpg" alt="Log Haven" class="lazy-image"></div></div>
+              <div class="wrapper">
+                <span class="label has-square has-square--orange">Rank #5 · Dine</span>
+                <div class="row">
+                  <div class="column small-12 xlarge-offset-6 xlarge-6">
+                    <h3 class="h5 uppercase">Log Haven Restaurant</h3>
+                    <div class="wysiwyg">
+                      <p>Romance and fine dining in a historic log mansion nestled in Millcreek Canyon with canyon waterfalls.</p>
+                    </div>
+                    <a href="https://log-haven.com" target="_blank" class="button button--orange large-up">
+                      Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+                    </a>
+                    <a href="https://log-haven.com" target="_blank" class="arrow-link large-down">
+                      Learn More <svg class="icon icon--chevron-right"><use xlink:href="#chevron-right"></use></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
