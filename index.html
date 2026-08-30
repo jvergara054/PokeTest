@@ -2491,18 +2491,7 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
         // Keep vertical pin duration short and snappy to avoid blank gaps
         const pinDuration = Math.min(1000, maxScroll);
         
-        // Register custom ScrollTrigger pinning on the follow section
-        ScrollTrigger.create({
-          trigger: slider.closest('section'),
-          start: "top top", // Pin when the section hits the top of the screen
-          end: `+=${pinDuration}`,
-          pin: true,
-          pinSpacing: true,
-          scrub: 0.25,
-          id: "follow-pin"
-        });
-        
-        // Animate horizontal translation of the card row
+        // Animate horizontal translation AND pin the follow section in a single, synchronized ScrollTrigger
         gsap.to(container, {
           x: -maxScroll,
           ease: "none",
@@ -2510,7 +2499,10 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
             trigger: slider.closest('section'),
             start: "top top",
             end: `+=${pinDuration}`,
-            scrub: 0.25
+            pin: true,
+            pinSpacing: true,
+            scrub: 0.25,
+            invalidateOnRefresh: true
           }
         });
 
