@@ -2635,19 +2635,61 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
   <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a31532ce2f991492',t:'MTc4Nzc3MjA3NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1"></iframe>
 
 <script async="" src="wp-includes/js/search-insights.js"></script><!-- Removed Chatbase elements --><script>
-  // Synchronize 6 tabs with Slick slider in homepage__rvs
-  if (typeof jQuery !== 'undefined') {
-    jQuery(function($) {
-      var $slider = $('.homepage__rvs__type__slider');
-      var $tabs = $('.homepage__rvs__types-list li');
-      var $cursorNum = $('.homepage__rvs__type__cursor [data-slide-num]');
+  window.addEventListener('load', () => {
+    // 1. Scroll-driven interactive tab & slide switching for .homepage__rvs
+    const rvsSection = document.querySelector('.homepage__rvs');
+    if (rvsSection && typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined' && typeof jQuery !== 'undefined') {
+      const $slider = jQuery('.homepage__rvs__type__slider');
+      const $tabs = jQuery('.homepage__rvs__types-list li');
+      const $cursorNum = jQuery('.homepage__rvs__type__cursor [data-slide-num]');
+      const totalTabs = 6;
+      const pinDistance = 2400; // ~400px per tab for silky smooth scrolling
 
+      // Remove the theme's old 2-type timeline/pin to avoid collision
+      ScrollTrigger.getAll().forEach(st => {
+        if (st.trigger === rvsSection || (st.trigger && st.trigger.classList && (st.trigger.classList.contains('homepage__rvs') || st.trigger.classList.contains('homepage__rvs__type')))) {
+          st.kill(true);
+        }
+      });
+
+      // Create unified scroll-driven trigger
+      ScrollTrigger.create({
+        trigger: rvsSection,
+        start: "top top",
+        end: `+=${pinDistance}`,
+        pin: true,
+        pinSpacing: true,
+        scrub: 0.1,
+        onUpdate: (self) => {
+          let idx = Math.floor(self.progress * totalTabs);
+          if (idx >= totalTabs) idx = totalTabs - 1;
+          if (idx < 0) idx = 0;
+
+          if ($slider.length && $slider.hasClass('slick-initialized')) {
+            const current = $slider.slick('slickCurrentSlide');
+            if (current !== idx) {
+              $slider.slick('slickGoTo', idx);
+              $tabs.removeClass('is-active').filter('[data-tab-index="' + idx + '"]').addClass('is-active');
+              $cursorNum.text(idx + 1);
+            }
+          }
+        }
+      });
+
+      // Clicking any tab advances both the slider and scrolls to that segment
       $tabs.on('click', function(e) {
         e.preventDefault();
-        var idx = $(this).data('tab-index');
-        if (typeof idx !== 'undefined') {
-          $slider.slick('slickGoTo', parseInt(idx));
+        var idx = parseInt(jQuery(this).data('tab-index'));
+        if (!isNaN(idx)) {
+          $slider.slick('slickGoTo', idx);
           $tabs.removeClass('is-active').filter('[data-tab-index="' + idx + '"]').addClass('is-active');
+          $cursorNum.text(idx + 1);
+          
+          const st = ScrollTrigger.getAll().find(s => s.trigger === rvsSection);
+          if (st) {
+            const targetY = st.start + (idx / totalTabs) * pinDistance + 10;
+            window.scrollTo({ top: targetY, behavior: 'smooth' });
+          }
         }
       });
 
@@ -2655,27 +2697,18 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
         $tabs.removeClass('is-active').filter('[data-tab-index="' + nextSlide + '"]').addClass('is-active');
         $cursorNum.text(nextSlide + 1);
       });
-    });
-  }
+    }
 
-  window.addEventListener('load', () => {
-    // Custom GSAP horizontal scroll registration for Utah's Best card deck
+    // 2. Custom GSAP horizontal scroll registration for Utah's Best card deck
     const slider = document.querySelector('.side-slider--custom-auto');
     if (slider && typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
       setTimeout(() => {
         const container = slider.querySelector('.overlap-card-container');
-        const cards = container.children;
-        const lastCard = cards[cards.length - 1];
-        
-        // Calculate max horizontal overflow width
         const containerWidth = container.scrollWidth;
         const viewportWidth = window.innerWidth;
         const maxScroll = Math.max(0, containerWidth - viewportWidth + 80);
-        
-        // Keep vertical pin duration short and snappy to avoid blank gaps
         const pinDuration = Math.min(1000, maxScroll);
         
-        // Animate horizontal translation AND pin the follow section in a single, synchronized ScrollTrigger
         gsap.to(container, {
           x: -maxScroll,
           ease: "none",
@@ -2690,12 +2723,10 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
           }
         });
 
-        // Refresh triggers to compute new dimensions
         ScrollTrigger.sort();
         ScrollTrigger.refresh();
       }, 300);
     } else {
-      // Fallback sort and refresh if custom slider not found
       if (typeof ScrollTrigger !== 'undefined') {
         setTimeout(() => {
           ScrollTrigger.sort();
